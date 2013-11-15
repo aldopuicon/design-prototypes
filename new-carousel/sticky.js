@@ -6,7 +6,7 @@
     ----------------------------------------------- */
     function start() {
 
-        // Color Bar
+        // Sticky
         new Sticky();
 
     };
@@ -39,29 +39,28 @@
 
         Sticky = function() {
             
-            var Sticky = document.body.getElementsByClassName("color-bar");
-            if (Sticky.length <= 0) return;
-            Sticky = Sticky[0];
+            var element = document.getElementById("nav");
+            if (!element) return;
 
-            var StickyTop;
+            var elementTop;
             function calculate() {
-                StickyTop = getAbsolutePosition(Sticky).y;
+                elementTop = getAbsolutePosition(element).y;
             };
 
             var fixed = false;
             function update() {
-                if (document.body.scrollTop > StickyTop) {
+                if (document.body.scrollTop > elementTop) {
 
                     // If the target isn’t already fixed in place, fix it.
                     if (!fixed) {
-                        Sticky.className += " fixed";
+                        element.className += "fixed";
                         fixed = true;
                     }
                 } else {
 
                     // If the target is fixed in place, unfix it.
                     if (fixed) {
-                        Sticky.className = Sticky.className.replace(/fixed/g, "");
+                        element.className = element.className.replace(/fixed/g, "");
                         fixed = false;
                     }
                 }
