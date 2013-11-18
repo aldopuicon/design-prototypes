@@ -3,12 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <title>GOOD | Live Well + Do Good</title>
+  <style>
+  	img {
+  		display: inline-block;
+  	}
 
+  	.carousel {
+  		width:100%; 
+  		overflow-x: auto; 
+  		overflow-y: hidden; 
+  		white-space: nowrap; 
+  		margin:0; height: 200px;
+  	}
+
+  	#nav {
+  		background-image: url(img/background-element.png); 
+  		background-repeat: repeat-x; 
+  		background-position: top; 
+  		height: 61px;
+  	}
+
+  	#nav div {
+		position: relative; 
+		margin: 0 auto; 
+		width: 1105px; 
+		background-image: url(img/background-element.png); 
+		background-repeat: repeat-x; 
+		background-position: top;
+  	}
+
+  	.post {
+  		position: relative; 
+  		margin: 0 auto; 
+  		width: 1105px;
+  	}
+
+  	#nav.fixed {
+  		position: fixed;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		z-index: 1;
+  	}
+
+  	#nav.fixed+div {
+		margin-top: 60px;
+  	}
+
+  </style>
 </head>
-<body id="content" style="margin:0; background-image: url(img/carousel-1.png); background-repeat: repeat-x; background-position: top; height: 3000px">
-
-  
-
-  <script src="scroll.js"></script>
+<body id="content" style="margin:0; background-position: top;">
+	<div class="carousel"><img src="img/carousel-wide.png"/><img src="img/carousel-wide.png"/></div>
+	<div id="nav">
+		<div><img style="display: block;" src="img/nav.png"/></div>
+	</div>	
+	<div class="post"><img src="img/post.png"></div>
+<script src="scroll.js"></script>
+<script src="sticky.js"></script>
 </body>
 </html>
