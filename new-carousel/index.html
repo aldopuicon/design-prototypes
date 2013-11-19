@@ -17,7 +17,7 @@
   	}
 
   	#nav {
-  		background-image: url(img/background-element.png); 
+      background-image: url(img/background-element.png); 
   		background-repeat: repeat-x; 
   		background-position: top; 
   		height: 61px;
@@ -47,15 +47,27 @@
   	}
 
   	#nav.fixed+div {
-		margin-top: 60px;
+		  margin-top: 60px;
   	}
 
+    #nav .share {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      margin-left: -720px;
+    }
+
+    #nav.fixed .share {
+      top: 0;
+      transition: top 0.2s;
+    }
   </style>
 </head>
 <body id="content" style="margin:0; background-position: top;">
 	<div class="carousel"><img src="img/carousel-wide.png"/><img src="img/carousel-wide.png"/></div>
 	<div id="nav">
-		<div><img style="display: block;" src="img/nav.png"/></div>
+		<div class="nav"><img style="display: block;" src="img/nav.png"/></div>
+    <div class="share"><img style="display: block;" src="img/replace.png"/></div>
 	</div>	
 	<div class="post"><img src="img/post.png"></div>
 <script src="scroll.js"></script>
