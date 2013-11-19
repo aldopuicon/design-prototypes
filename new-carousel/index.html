@@ -1,76 +1,104 @@
+
 <!doctype html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <title>GOOD | Live Well + Do Good</title>
-  <style>
-  	img {
-  		display: inline-block;
-  	}
-
-  	.carousel {
-  		width:100%; 
-  		overflow-x: auto; 
-  		overflow-y: hidden; 
-  		white-space: nowrap; 
-  		margin:0; height: 200px;
-  	}
-
-  	#nav {
-      background-image: url(img/background-element.png); 
-  		background-repeat: repeat-x; 
-  		background-position: top; 
-  		height: 61px;
-  	}
-
-  	#nav div {
-		position: relative; 
-		margin: 0 auto; 
-		width: 1440px; 
-		background-image: url(img/background-element.png); 
-		background-repeat: repeat-x; 
-		background-position: top;
-  	}
-
-  	.post {
-  		position: relative; 
-  		margin: 0 auto; 
-  		width: 1105px;
-  	}
-
-  	#nav.fixed {
-  		position: fixed;
-  		top: 0;
-  		left: 0;
-  		width: 100%;
-  		z-index: 1;
-  	}
-
-  	#nav.fixed+div {
-		  margin-top: 60px;
-  	}
-
-    #nav .share {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      margin-left: -720px;
-    }
-
-    #nav.fixed .share {
-      top: 0;
-      transition: top 0.2s;
-    }
-  </style>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Web Prototypes / Good</title>
+	<style type="text/css">
+		html, body, #outer-outer-container, #outer-container {
+			height: 100%;
+			min-height: 100%;
+		}
+		body {
+			font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin: 0;
+			background: rgb(244, 245, 244);
+			color: rgb(0, 1, 0); /* @text-color */
+		}
+		a {
+			color: rgb(110, 160, 26); /* @link-color */
+			text-decoration: none;
+		}
+		a:hover,
+		a:active,
+		a:focus {
+			text-decoration: underline;
+		}
+		a:visited {
+			color: #333;
+		}
+		h1 {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+		h2 {
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+		h2 strong {
+			font-weight: bold;
+		}
+		h2 + p {
+			margin-top: 0;
+			max-width: 25em;
+		}
+		#container {
+			margin: 50px auto;
+		}
+		#outer-outer-container {
+			margin: 0 auto;
+			display: table;
+			padding: 2em;
+		}
+		#outer-container {
+			display: table-cell;
+			vertical-align: middle;
+			margin: 0 auto;
+		}
+		#container > section > section {
+			margin-right: 3em;
+		}
+	</style>
 </head>
-<body id="content" style="margin:0; background-position: top;">
-	<div class="carousel"><img src="img/carousel-wide.png"/><img src="img/carousel-wide.png"/></div>
-	<div id="nav">
-		<div class="nav"><img style="display: block;" src="img/nav.png"/></div>
-    <div class="share"><img style="display: block;" src="img/replace.png"/></div>
-	</div>	
-	<div class="post"><img src="img/post.png"></div>
-<script src="scroll.js"></script>
-<script src="sticky.js"></script>
+<body>
+	<div id="outer-outer-container">
+		<div id="outer-container">
+			<div id="container">
+
+				<header>
+					<h1>GOOD / New Carousel Design</h1>
+				</header>
+
+				<section>
+					<section>
+						<a href="flat-proto.html">
+							<h2><strong>New Carousel:</strong> Flat</h2>
+							<p>November, 2013</p>
+						</a>
+					</section>
+					<section>
+						<a href="full-proto.html">
+							<h2><strong>New Carousel:</strong> Colorful Tiles, Swipe &amp; Dropdown Nav on Scroll</h2>
+							<p>November, 2013</p>
+						</a>
+					</section>
+          <section>
+            <a href="full-proto-1.html">
+              <h2><strong>New Carousel:</strong> Colorful Tiles &amp; Swipe </h2>
+              <p>November, 2013</p>
+            </a>
+          </section>
+          <section>
+            <a href="full-proto-2.html">
+              <h2><strong>New Carousel:</strong> Black Text on White Tiles &amp; Swipe</h2>
+              <p>November, 2013</p>
+            </a>
+          </section>
+				</section>
+
+			</div>
+		</div>
+	</div>
 </body>
 </html>
