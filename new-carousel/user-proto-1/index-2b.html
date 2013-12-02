@@ -78,8 +78,13 @@
       border-right:1px solid black;
       border-bottom:5px solid black; 
       padding:20px;
-      display: inline-block;
+      float: left;
       white-space: normal;
+    }
+
+  .user img {
+    vertical-align:middle;
+    margin-right: 5px;
     }
 
   </style>
@@ -88,11 +93,10 @@
   <div id="nav">
     <div><img style="display: block;" src="img/nav.png"/></div>
   </div>
-  <div class="carousel"><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/></div>
-  <div class="post"><img src="img/feed-example.png"></div>
-
-<!--  <div class="carousel">
-     <div class="tile">
+<!--    <div class="carousel"><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/></div>  -->
+<div class="carousel">
+  <div style="width:3120px;">
+       <div class="tile">
         <div class="user"><img src="img/user.png"/> Greenz Global</div>
         <div class="postname">“Hikari-gaoka Share House Project” Opens the Doors to the…</div>
         <div class="postimg"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></div>
@@ -176,8 +180,9 @@
         <div class="postimg"><img src="img/postimg.png" style="margin-top:40px; margin-bottom:10px;"/></div>
         <div class="hubtag">Creative Collaboration</div>
       </div>
+    </div> <!-- closing container inside carousel -->
   </div>
-	<div class="post"><img src="img/post-current.png"></div> -->
+  <div class="post"><img src="img/feed-example.png"></div>
 <!-- <script src="scroll.js"></script> -->
 </body>
 </html>
