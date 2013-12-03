@@ -19,47 +19,50 @@
       margin-bottom: 15px;
     }
 
-  	.carousel {
-  		width:100%; 
-  		overflow-x: auto; 
-  		overflow-y: hidden; 
-  		margin:0; height: 260px;
+    .carousel {
+      width:100%; 
+      overflow-x: auto; 
+      overflow-y: hidden; 
+      margin:0; 
+      height: 270px;
       white-space: nowrap;
-  	}
+      background-color: #f1f7ff;
+      border-bottom: 1px solid #ccc;
+    }
 
-  	#nav {
-  		background-image: url(img/background-element.png); 
-  		background-repeat: repeat-x; 
-  		background-position: top; 
-  		height: 130px;
-  	}
+    #nav {
+      background-image: url(img/background-element.png); 
+      background-repeat: repeat-x; 
+      background-position: top; 
+      height: 130px;
+    }
 
-  	#nav div {
-		  position: relative; 
-		  margin: 0 auto; 
-		  width: 1440px; 
-		  background-image: url(img/background-element.png); 
-		  background-repeat: repeat-x; 
-		  background-position: top;
-  	}
+    #nav div {
+      position: relative; 
+      margin: 0 auto; 
+      width: 1440px; 
+      background-image: url(img/background-element.png); 
+      background-repeat: repeat-x; 
+      background-position: top;
+    }
 
-  	.post {
-  		position: relative; 
-  		margin: 0 auto; 
-  		width: 1265px;
-  	}
+    .post {
+      position: relative; 
+      margin: 0 auto; 
+      width: 1265px;
+    }
 
-  	#nav.fixed {
-  		position: fixed;
-  		top: 0;
-  		left: 0;
-  		width: 100%;
-  		z-index: 1;
-  	}
+    #nav.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
-  	#nav.fixed+div {
-		margin-top: 60px;
-  	}
+    #nav.fixed+div {
+    margin-top: 60px;
+    }
 
     .user {
       font-family: helvetica, arial, sans-serif;
@@ -86,15 +89,18 @@
 
     .tile {
       box-sizing: border-box;
-      margin:0; 
-      width:260px; 
-      height:260px; 
-      border-width: 0 1px 5px 0;
+      margin: 15px 10px 15px 10px; 
+      width:240px; 
+      height:240px; 
+      border-width: 1px 1px 5px 1px;
       border-style: solid;
-      border-right-color: #dedede; 
-      padding:20px;
+      border-top-color: #dedede; 
+      border-right-color: #dedede;
+      border-left-color: #dedede; 
+      padding:10px;
       float: left;
       white-space: normal;
+      background-color: white;
     }
 
   .user img {
@@ -287,6 +293,7 @@
   </div>
   <div class="post"><img src="img/post-2.png"></div>
 
+<script>window.magicNumber = -165</script>
 <script src="scroll.js"></script>
 
 <script type="text/javascript">
