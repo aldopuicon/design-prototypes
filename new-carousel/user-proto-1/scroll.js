@@ -194,7 +194,7 @@
           scrolling = false;
           //if (getViewportDimensions().height + scroll.top < y) {
             lastScrollTop = undefined;
-            var magicNumber = -220;  // Move a little bit above the target. (This number is arbitrary.)
+            var magicNumber = -210;  // Move a little bit above the target. (This number is arbitrary.)
             var targetY = getCumulativeOffset(element).top - magicNumber;
 
             var footer = document.getElementById("footer");

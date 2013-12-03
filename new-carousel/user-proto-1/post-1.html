@@ -105,23 +105,20 @@
   .next {
     position: absolute;
     z-index: 1;
-    top:220px;
+    top:80px;
     right:0;
   }
 
   .prev {
     position: absolute;
     z-index: 1;
-    top:220px;
+    top:80px;
     left:0;
   }
 
   </style>
 </head>
 <body id="content" style="margin:0; background-position: top;">
-  <div id="nav">
-    <div><img style="display: block;" src="img/nav.png"/></div>
-  </div>
 <!--    <div class="carousel"><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/></div>  -->
 <div class="carousel">
   <a class="prev" href="#prev"><img src="img/left-arrow.png" style="margin:0;"/></a>
@@ -129,8 +126,8 @@
   <div style="width:6240px; background-color:#f1f7ff;">
        <div class="tile">
         <div class="user"><a href="#"><img src="img/greenz.png"/> Greenz Global</a></div>
-        <div class="postname"><a href="#">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
-        <div class="postimg"><a href="#"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-1.html">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
+        <div class="postimg"><a href="post-1.html"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Culture Jamming</a></div>
       </div>
      <div class="tile">
@@ -153,8 +150,8 @@
       </div>
      <div class="tile">
         <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
-        <div class="postname"><a href="#">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
-        <div class="postimg"><a href="#"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-3.html">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
+        <div class="postimg"><a href="post-3.html"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Impact Design</a></div>
       </div>
      <div class="tile">
@@ -183,8 +180,8 @@
       </div>
      <div class="tile">
         <div class="user"><a href="#"><img src="img/oliver.png"/> Oliver Munday</a></div>
-        <div class="postname"><a href="#">How I Turned My Love of 'The Wire' into Design for…</a></div>
-        <div class="postimg"><a href="#"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-2.html">How I Turned My Love of 'The Wire' into Design for…</a></div>
+        <div class="postimg"><a href="post-2.html"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Impact Design</a></div>
       </div>
      <div class="tile">
@@ -207,8 +204,8 @@
       </div>       
        <div class="tile">
         <div class="user"><a href="#"><img src="img/greenz.png"/> Greenz Global</a></div>
-        <div class="postname"><a href="#">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
-        <div class="postimg"><a href="#"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-1.html">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
+        <div class="postimg"><a href="post-1.html"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Culture Jamming</a></div>
       </div>
      <div class="tile">
@@ -231,8 +228,8 @@
       </div>
      <div class="tile">
         <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
-        <div class="postname"><a href="#">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
-        <div class="postimg"><a href="#"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-3.html">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
+        <div class="postimg"><a href="post-3.html"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Impact Design</a></div>
       </div>
      <div class="tile">
@@ -261,8 +258,8 @@
       </div>
      <div class="tile">
         <div class="user"><a href="#"><img src="img/oliver.png"/> Oliver Munday</a></div>
-        <div class="postname"><a href="#">How I Turned My Love of 'The Wire' into Design for…</a></div>
-        <div class="postimg"><a href="#"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="postname"><a href="post-2.html">How I Turned My Love of 'The Wire' into Design for…</a></div>
+        <div class="postimg"><a href="post-2.html"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
         <div class="hubtag"><a href="#">Impact Design</a></div>
       </div>
      <div class="tile">
@@ -285,9 +282,12 @@
       </div>       
     </div> <!-- closing container inside carousel -->
   </div>
-  <div class="post"><img src="img/feed-example.png"></div>
+  <div id="nav">
+    <div><img style="display: block;" src="img/nav.png"/></div>
+  </div>
+  <div class="post"><img src="img/post-1.png"></div>
 
-<!-- <script src="scroll.js"></script> -->
+<script src="scroll.js"></script>
 
 <script type="text/javascript">
   var carousel = document.querySelector(".carousel");
