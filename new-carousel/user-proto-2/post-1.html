@@ -296,27 +296,5 @@
   </div>
   <div class="post"><img src="img/post-1.png" width="1265" height="2020"></div>
 
-<script type="text/javascript">
-  var carousel = document.querySelector(".carousel");
-  if (carousel) {
-    carousel.scrollLeft = 600;
-  }
-
-  var next = document.querySelector(".next");
-  if (next) {
-    next.addEventListener("click", function(e) {
-      e.preventDefault();
-      carousel.scrollLeft = carousel.scrollLeft + 262 * 5;
-    });
-  }
-
-  var prev = document.querySelector(".prev");
-  if (prev) {
-    prev.addEventListener("click", function(e) {
-      e.preventDefault();
-      carousel.scrollLeft = carousel.scrollLeft - 262 * 5;
-    });
-  }  
-</script>
 </body>
 </html>

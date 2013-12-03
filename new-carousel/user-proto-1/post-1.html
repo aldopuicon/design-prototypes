@@ -293,6 +293,10 @@
   var carousel = document.querySelector(".carousel");
   if (carousel) {
     carousel.scrollLeft = 600;
+    carousel.addEventListener("mouseover", function(e) {
+      window.scrollTo(0,0)
+      console.log("holler")
+    });
   }
 
   var next = document.querySelector(".next");

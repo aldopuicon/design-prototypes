@@ -290,27 +290,5 @@
 <script>window.magicNumber = -140</script>
 <script src="scroll.js"></script>
 
-<script type="text/javascript">
-  var carousel = document.querySelector(".carousel");
-  if (carousel) {
-    carousel.scrollLeft = 600;
-  }
-
-  var next = document.querySelector(".next");
-  if (next) {
-    next.addEventListener("click", function(e) {
-      e.preventDefault();
-      carousel.scrollLeft = carousel.scrollLeft + 262 * 5;
-    });
-  }
-
-  var prev = document.querySelector(".prev");
-  if (prev) {
-    prev.addEventListener("click", function(e) {
-      e.preventDefault();
-      carousel.scrollLeft = carousel.scrollLeft - 262 * 5;
-    });
-  }  
-</script>
 </body>
 </html>
