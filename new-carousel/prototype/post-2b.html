@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>GOOD | Live Well + Do Good</title>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/e13ac1f8-9019-429d-a8e5-954965bb3fda.css" />
+  <style>
+
+    a {
+      text-decoration: none;
+      font-family: helvetica, arial, sans-serif;
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    a:hover {
+      text-decoration: none;
+      font-family: helvetica, arial, sans-serif;
+      color: #71b3f7;
+      margin-bottom: 15px;
+    }
+
+    .carousel {
+      width:100%; 
+      overflow-x: auto; 
+      overflow-y: hidden; 
+      margin:0; 
+      height: 270px;
+      white-space: nowrap;
+      background-color: #f1f7ff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #nav {
+      background-image: url(img/background-element.png); 
+      background-repeat: repeat-x; 
+      background-position: top; 
+      height: 130px;
+    }
+
+    #nav div {
+      position: relative; 
+      margin: 0 auto; 
+      width: 1440px; 
+      background-image: url(img/background-element.png); 
+      background-repeat: repeat-x; 
+      background-position: top;
+    }
+
+    .post {
+      position: relative; 
+      margin: 0 auto; 
+      width: 1265px;
+    }
+
+    #nav.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #nav.fixed+div {
+    margin-top: 60px;
+    }
+
+    .user {
+      font-family: helvetica, arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .postname a {
+      font-family: "FreightText Light",Georgia,serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      padding-right: 20px;
+    }
+
+    .hubtag {
+      font-family: helvetica, arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .tile {
+      box-sizing: border-box;
+      margin: 15px 10px 15px 10px; 
+      width:240px; 
+      height:240px; 
+      border-width: 1px 1px 5px 1px;
+      border-style: solid;
+      border-top-color: #dedede; 
+      border-right-color: #dedede;
+      border-left-color: #dedede; 
+      padding:10px;
+      float: left;
+      white-space: normal;
+      background-color: white;
+    }
+
+  .user img {
+    vertical-align:middle;
+    margin-right: 5px;
+    }
+
+  .next {
+    position: absolute;
+    z-index: 1;
+    top:130px;
+    right:0;
+  }
+
+  .prev {
+    position: absolute;
+    z-index: 1;
+    top:130px;
+    left:0;
+  }
+
+  .carouseltitle {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    background-color: #f1f7ff;  
+  }
+
+  </style>
+</head>
+<body id="content" style="margin:0; background-position: top;">
+<!--    <div class="carousel"><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/><img src="img/carousel-1.png"/><img src="img/carousel-2.png"/></div>  -->
+<div class="carouseltitle">Now Trending on GOOD</div>
+<div class="carousel">
+  <a class="prev" href="#prev"><img src="img/left-arrow.png" style="margin:0;"/></a>
+  <a class="next" href="#next"><img src="img/right-arrow.png"/></a>
+  <div style="width:6240px; background-color:#f1f7ff;">
+       <div class="tile">
+        <div class="user"><a href="#"><img src="img/greenz.png"/> Greenz Global</a></div>
+        <div class="postname"><a href="post-1b.html">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
+        <div class="postimg"><a href="post-1b.html"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Culture Jamming</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jessica.png"/> Jessica Rivera</a></div>
+        <div class="postname"><a href="#">Meet "the AIDS Granny" - In Exile for Exposing the AIDS…</a></div>
+        <div class="postimg"><a href="#"><img src="img/changemakers.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Changemakers</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/joel.png"/> Joel Fralick</a></div>
+        <div class="postname"><a href="#">A City Education: Engaging Families Ensures Student…</a></div>
+        <div class="postimg"><a href="#"><img src="img/education.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Change Education</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/hailey.png"/> Hailey Lynn</a></div>
+        <div class="postname"><a href="#">Help Send A 15 Year Old Aspiring Filmmaker To…</a></div>
+        <div class="postimg"><a href="#"><img src="img/push.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Push for Good</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
+        <div class="postname"><a href="post-3b.html">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
+        <div class="postimg"><a href="post-3b.html"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Impact Design</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jennifer.png"/> Jennifer Barbour</a></div>
+        <div class="postname"><a href="#">Five Simple Ways to Shop with a Conscience This…</a></div>
+        <div class="postimg"><a href="#"><img src="img/lifehacking.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Life Hacking</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/tanner.png"/> Tanner C</a></div>
+        <div class="postname"><a href="#">How to Build a Climate for Creativity In Your Work Environment</a></div>
+        <div class="postimg"><a href="#"><img src="img/creative.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creative Collaboration</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/lara.png"/> Lara Rabinovitch</a></div>
+        <div class="postname"><a href="#">Guerrilla Street Art Campaign in Germany Covers…</a></div>
+        <div class="postimg"><a href="#"><img src="img/guerilla.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Guerilla Campaigns</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jessica.png"/> Jessica Rivera</a></div>
+        <div class="postname"><a href="#">11 Controversial Health Innovations (That We're Still…</a></div>
+        <div class="postimg"><a href="#"><img src="img/health.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Health Innovations</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/oliver.png"/> Oliver Munday</a></div>
+        <div class="postname"><a href="post-2b.html">How I Turned My Love of 'The Wire' into Design for…</a></div>
+        <div class="postimg"><a href="post-2b.html"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Impact Design</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
+        <div class="postname"><a href="#">Photographing Education Across The Globe, One…</a></div>
+        <div class="postimg"><a href="#"><img src="img/educreatives.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Education Creatives</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/katelan.png"/> Katelan Cunningham</a></div>
+        <div class="postname"><a href="#">Your Life in Jelly Beans: A Perspective Through Animation</a></div>
+        <div class="postimg"><a href="#"><img src="img/creativeperspectives.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creative Perspectives</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/ritu.png"/> Ritu Pant</a></div>
+        <div class="postname"><a href="#">How Three Decades of News Coverage Has Shaped Our…</a></div>
+        <div class="postimg"><a href="#"><img src="img/creatingmedia.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creating Media</a></div>
+      </div>       
+       <div class="tile">
+        <div class="user"><a href="#"><img src="img/greenz.png"/> Greenz Global</a></div>
+        <div class="postname"><a href="post-1b.html">“Hikari-gaoka Share House Project” Opens the Doors to the…</a></div>
+        <div class="postimg"><a href="post-1b.html"><img src="img/culture.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Culture Jamming</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jessica.png"/> Jessica Rivera</a></div>
+        <div class="postname"><a href="#">Meet "the AIDS Granny" - In Exile for Exposing the AIDS…</a></div>
+        <div class="postimg"><a href="#"><img src="img/changemakers.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Changemakers</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/joel.png"/> Joel Fralick</a></div>
+        <div class="postname"><a href="#">A City Education: Engaging Families Ensures Student…</a></div>
+        <div class="postimg"><a href="#"><img src="img/education.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Change Education</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/hailey.png"/> Hailey Lynn</a></div>
+        <div class="postname"><a href="#">Help Send A 15 Year Old Aspiring Filmmaker To…</a></div>
+        <div class="postimg"><a href="#"><img src="img/push.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Push for Good</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
+        <div class="postname"><a href="post-3b.html">NOMAD Micro Home Promises Inexpensive Off-Grid Living</a></div>
+        <div class="postimg"><a href="post-3b.html"><img src="img/impact.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Impact Design</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jennifer.png"/> Jennifer Barbour</a></div>
+        <div class="postname"><a href="#">Five Simple Ways to Shop with a Conscience This…</a></div>
+        <div class="postimg"><a href="#"><img src="img/lifehacking.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Life Hacking</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/tanner.png"/> Tanner C</a></div>
+        <div class="postname"><a href="#">How to Build a Climate for Creativity In Your Work Environment</a></div>
+        <div class="postimg"><a href="#"><img src="img/creative.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creative Collaboration</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/lara.png"/> Lara Rabinovitch</a></div>
+        <div class="postname"><a href="#">Guerrilla Street Art Campaign in Germany Covers…</a></div>
+        <div class="postimg"><a href="#"><img src="img/guerilla.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Guerilla Campaigns</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/jessica.png"/> Jessica Rivera</a></div>
+        <div class="postname"><a href="#">11 Controversial Health Innovations (That We're Still…</a></div>
+        <div class="postimg"><a href="#"><img src="img/health.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Health Innovations</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/oliver.png"/> Oliver Munday</a></div>
+        <div class="postname"><a href="post-2b.html">How I Turned My Love of 'The Wire' into Design for…</a></div>
+        <div class="postimg"><a href="post-2b.html"><img src="img/design.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Impact Design</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/agus.png"/> Agus Echague</a></div>
+        <div class="postname"><a href="#">Photographing Education Across The Globe, One…</a></div>
+        <div class="postimg"><a href="#"><img src="img/educreatives.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Education Creatives</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/katelan.png"/> Katelan Cunningham</a></div>
+        <div class="postname"><a href="#">Your Life in Jelly Beans: A Perspective Through Animation</a></div>
+        <div class="postimg"><a href="#"><img src="img/creativeperspectives.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creative Perspectives</a></div>
+      </div>
+     <div class="tile">
+        <div class="user"><a href="#"><img src="img/ritu.png"/> Ritu Pant</a></div>
+        <div class="postname"><a href="#">How Three Decades of News Coverage Has Shaped Our…</a></div>
+        <div class="postimg"><a href="#"><img src="img/creatingmedia.png" style="margin-top:40px; margin-bottom:10px;"/></a></div>
+        <div class="hubtag"><a href="#">Creating Media</a></div>
+      </div>       
+    </div> <!-- closing container inside carousel -->
+  </div>
+<script>window.magicNumber = -210</script>
+<script src="scrollb.js"></script>
+
+  <div id="nav">
+    <div><img style="display: block;" src="img/nav.png"/></div>
+  </div>
+  <div class="post"><img src="img/post-2.png" width="1265" height="5565"></div>
+
+</body>
+</html>
