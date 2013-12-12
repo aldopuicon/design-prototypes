@@ -32,10 +32,13 @@
 
 /* =Background
   ----------------------------------------------- */
-  .background {
+  .background,
+  .background .blur {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .background {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,13 +46,11 @@
     height: 100%;
     z-index: -1;
   }
-  .background .mask {
-    background: transparent url(images/backgrounds/mask.svg) bottom repeat-x;
+  .background .blur {
     height: 100%;
   }
-  .background .color {
-    mix-blend-mode: multiply; // Chrome Canary
-    -webkit-mix-blend-mode: multiply; // WebKit Nightly
+  .background .mask {
+    background: transparent url(images/backgrounds/mask.svg) bottom repeat-x;
     height: 100%;
   }
 
