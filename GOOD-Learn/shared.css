@@ -9,7 +9,7 @@
     font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* 20px font size */
     max-width: 50em;
     margin: 0 auto;
-    padding: 0 1.5em;
+    padding: 0;
     background: rgb(0, 1, 1);
     color: white;
   }
@@ -78,6 +78,11 @@
     border-bottom: 1px solid white;
     padding: 1.5em 0;
     position: relative;
+    margin-left  : 1.5em; /* @page-padding */
+    margin-right : 1.5em; /* @page-padding */
+  }
+  header.fixed {
+    position: fixed;
   }
   header h2 {
     font-size: inherit;
@@ -208,17 +213,23 @@
 
 /* =Activity
   ----------------------------------------------- */
+
   .activity-list ul,
   .activity-list li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
+  .activity-list > ul > li {
+    margin-left  : 1.5em; /* @page-padding */
+    margin-right : 1.5em; /* @page-padding */
+  }
   .activity {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     padding: 3em 0;
   }
 
+  /* Position the author on the right */
   @media (min-width: 50em) {
     .activity:after {
       content: "";
@@ -234,6 +245,18 @@
       margin-right: 5%;
       float: right;
     }
+  }
+
+  /* Start the list out at the bottom of the window */
+  .activity-list.positioned {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+  }
+  .activity-list.positioned > ul {
+    max-width: 50em;
+    margin: 0 auto;
   }
 
 
