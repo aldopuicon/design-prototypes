@@ -52,22 +52,37 @@
   header {
     border-bottom: 1px solid white;
     padding: 1.5em 0;
+    position: relative;
   }
   header h2 {
     font-size: inherit;
+    font-size: 0.5em;
   }
   header h2 a {
     display: block;
 
     background: url(images/good.png) center no-repeat;
     background-size: contain;
-    width: 12.8em; /* 256px / @font-size  */
-    height: 7.1em; /* 142px / @font-size  */
+    width  : 12.8em; /* image-width / @font-size (256px / 20px) */
+    height :  7.1em; /* image-width / @font-size (142px / 20px) */
 
     /* @image-replacement */
     text-indent: -9999px;
     overflow: hidden;
   }
+
+  @media(min-width: 50em) {
+    header h2 {
+      font-size: 0.75em;
+    }
+  }
+
+  @media(min-width: 60em) {
+    header h2 {
+      font-size: 1em;
+    }
+  }
+
 
   header nav.primary li {
     font-size: 0.7em;
@@ -108,37 +123,28 @@
   }
   header .search a {
     background-image: url(images/search.png);
-    width: 0.9em;  /* 18px / @font-size  */
-    height: 0.9em; /* 18px / @font-size  */
+    width: 0.9em;   /* image-width(18px) / @font-size  */
+    height: 0.9em;  /* image-width(18px) / @font-size  */
   }
   header .profile a {
     background-image: url(images/profile.png);
-    width: 1em;     /* 20px / @font-size  */
-    height: 0.75em; /* 15px / @font-size  */
+    width: 1em;     /* image-width(20px) / @font-size  */
+    height: 0.75em; /* image-width(15px) / @font-size  */
   }
   header .navigation a {
     background-image: url(images/navigation.png);
-    width: 1.1em;  /* 22px / @font-size  */
-    height: 0.9em; /* 18px / @font-size  */
+    width: 1.1em;   /* image-width(22px) / @font-size  */
+    height: 0.9em;  /* image-width(18px) / @font-size  */
   }
 
   header nav.secondary {
-    margin-top: 0.75em;
+    margin-top: 0;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
   }
 
-  @media (min-width: 30em) {
-    header nav.secondary {
-      margin-top: 0;
-      position: absolute;
-      top: 1.5em;
-      right: 1em;
-    }
-  }
-
-  @media (min-width: 50em) { 
-    header {
-      position: relative;
-    } 
+  @media (min-width: 30em) { 
     header h2,
     header nav.primary {
       display: inline-block;
@@ -153,6 +159,24 @@
     }
     header nav.primary {
       line-height: 1;
+    }
+  }
+
+  /* Hide the navigation on small screens
+  TODO: Add a button to show it again */
+  @media (max-width: 34.9em) {
+    header nav.primary {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+  @media (max-width: 44.9em) {
+    header nav.secondary .search,
+    header nav.secondary .profile {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
     }
   }
 
@@ -267,7 +291,7 @@
   .activity .tags li a:hover,
   .activity .tags li a:active,
   .activity .tags li a:focus,
-  .activity .tags li.active a {
+  .activity .tags li:first-child a {
     opacity: 1;
   }
 
