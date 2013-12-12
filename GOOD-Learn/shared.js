@@ -1,5 +1,6 @@
 
 // Move the content down a little
+/*
 (function() {
 
   var header = document.querySelector("header");
@@ -19,7 +20,7 @@
   }
 
 })();
-
+*/
 
 // Fade the blurred background in, as the page scrolls down
 (function() {
@@ -50,22 +51,31 @@
 
 
 // Fix the position of the header, until the content bumps into it
-/*
 (function() {
 
-  var header = document.querySelector("header");
-  if (!header) return;
+  var container = document.querySelector("body > .container");
+  var header    = document.querySelector("header");
 
-  var offset = header.offsetHeight;
+  if (container && header) {
+    container.className += " positioned";
+    var offset = container.offsetTop - header.offsetHeight;
 
-  window.addEventListener("scroll", function(e) {
-    if (window.scrollY < offset) {
-      header.className += " fixed";
-    } else {
-      header.className = header.className.replace(/fixed/g, "");
-    }
-  });
+    function check() {
+      if (window.scrollY < offset && window.innerHeight > header.offsetHeight) {
+        header.className += " fixed";
+        header.style.marginTop = 0;
+      } else {
+        header.className = header.className.replace(/fixed/g, "");
+        header.style.marginTop = -header.offsetHeight + "px";
+      }
+    };
+
+    window.addEventListener("scroll", check, false);
+    window.addEventListener("resize", check, false);
+    check();
+
+  }
 
 })();
-*/
+
 
