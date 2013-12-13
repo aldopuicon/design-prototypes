@@ -288,9 +288,19 @@
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     margin-bottom: 0;
   }
+  @media(max-width: 30em) {
+  .article h1 {
+    font-size: 1.5em; /* 48px / @font-size */
+  }
+  }
   .article p {
     margin-top: 0.75em;
     font-family: "Sabon LT W01 Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @sabon */
+  }
+  @media(max-width: 30em) {  
+      .article p {
+        font-size: 0.8em;
+      }
   }
   .article > a {
     display: block;
@@ -323,6 +333,20 @@
   }
   .activity .author img {
     border-radius: 999px; /* @circle */
+  }
+  @media(max-width: 30em) {
+      .activity .author img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+      .activity .author h2 {
+        display: inline;
+      }
+      .activity .author p {
+        display: none;
+      }
+
   }
 
 
