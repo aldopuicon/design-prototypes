@@ -60,13 +60,16 @@
     container.className += " positioned";
     var offset = container.offsetTop - header.offsetHeight;
 
+    var fixed;
     function check() {
       if (window.scrollY < offset && window.innerHeight > header.offsetHeight) {
-        header.className += " fixed";
+        if (fixed !== true) header.className += " fixed";
         header.style.marginTop = 0;
+        fixed = true;
       } else {
-        header.className = header.className.replace(/fixed/g, "");
+        if (fixed === true) header.className = header.className.replace(/fixed/g, "");
         header.style.marginTop = -header.offsetHeight + "px";
+        fixed = false;
       }
     };
 
