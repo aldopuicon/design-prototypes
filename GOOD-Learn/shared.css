@@ -23,6 +23,12 @@
     position: absolute;
     top: 60%;
   }
+  body > .container.positioned header {
+    padding: 0;
+  }
+  body > .container.positioned header.fixed {
+    padding: 0 1.5em;
+  }
 
   a {
     color: inherit;
