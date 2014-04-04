@@ -1,0 +1,155 @@
+body {
+  background-color: rgb(246, 246, 246);
+  font: 400 0.875em/1.38 Helvetica;
+  color: rgb(77, 77, 77);
+}
+
+.container {
+  position: absolute;
+  top: 261px;
+  left: 30%;
+  z-index: 9;
+  width: 40%;
+  height: 1px;
+  background-color: rgb(230, 230, 230);
+}
+
+.image {
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  left: 30%;
+  height: 25px;
+  min-height: 25px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(77, 77, 77);
+}
+
+._button {
+  display: block;
+  position: absolute;
+  left: 30%;
+  height: 40px;
+  font-weight: 700;
+  line-height: 1.38;
+  resize: none;
+}
+
+._input {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 40%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 6px rgba(241, 241, 241, 0.5) inset;
+  font-size: 1.143em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #333333;
+}
+
+.image-1 {
+  float: left;
+  width: 170px;
+  margin: 75px 0 0 10%;
+}
+
+.image-2 {
+  position: absolute;
+  top: 443px;
+  left: 27.9166666666%;
+  z-index: 13;
+  width: 15px;
+}
+
+.image-3 {
+  position: absolute;
+  top: 332px;
+  left: 27.5%;
+  z-index: 12;
+  width: 21px;
+}
+
+.image-4 {
+  position: absolute;
+  top: 208px;
+  left: 68.3333333333%;
+  z-index: 7;
+  width: 20px;
+}
+
+.image-5 {
+  position: absolute;
+  top: 543px;
+  left: 70.4166666666%;
+  z-index: 3;
+  width: 25px;
+  opacity: 0.25;
+}
+
+.text-1 {
+  top: 397px;
+  z-index: 11;
+  width: 26.3333333333%;
+}
+
+.text-2 {
+  top: 292px;
+  z-index: 6;
+  width: 18.25%;
+}
+
+.text-3 {
+  top: 502px;
+  z-index: 4;
+  width: 18.25%;
+}
+
+._button-1 {
+  top: 200px;
+  z-index: 8;
+  width: 15%;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-2 {
+  top: 606px;
+  width: 80px;
+  border-radius: 2px;
+  background-color: #8ae39a;
+  font-size: 1.143em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+._input-1 {
+  top: 422px;
+  z-index: 10;
+}
+
+._input-2 {
+  top: 317px;
+  z-index: 5;
+}
+
+._input-3 {
+  top: 527px;
+  z-index: 2;
+}
