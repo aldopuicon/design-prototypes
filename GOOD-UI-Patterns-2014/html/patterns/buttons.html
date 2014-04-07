@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Buttons / Good</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../../assets/shared.css" />
+  <script>
+    // fonts.com tracking
+    var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
+    (function() {
+      var t = document.createElement("script"); t.type = "text/javascript"; t.async = "true";
+      t.src = "//fast.fonts.net/t/trackingCode.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+  <script src="../../assets/shared.js"></script>
+
+  <!--[if lte IE 8]>
+  <script src="../../assets/modernizr.js"></script>
+  <![endif]-->
+
+</head>
+<body class="pattern">
+
+<section>
+  <h2>Primary</h2>
+
+  <h3>Button</h3>
+  <form action="" method="post">
+    <p><button type="submit">Submit</button></p>
+  </form>
+
+  <h3>Link</h3>
+  <p class="action"><a href="">Take Action</a></p>
+
+  <!--
+  <h3>Back</h3>
+  <p class="back"><a href="">Back to that page</a></p>
+
+  <h3>Top</h3>
+  <p class="top"><a href="">Back to that thing</a></p>
+  -->
+
+</section>
+
+<section id="secondary">
+  <h2>Secondary</h2>
+
+  <h3>Button</h3>
+  <form action="" method="post" class="secondary">
+    <p><button type="submit">Flag this post</button></p>
+  </form>
+
+  <h3>Link</h3>
+  <p class="secondary action"><a href="">Edit this post</a></p>
+</section>
+
+<section id="warning">
+  <h2>Warning</h2>
+
+  <form action="" method="post" class="warning">
+    <p><button type="submit">Delete</button></p>
+  </form>
+</section>
+
+<!--
+<section id="follow">
+  <h2>Update</h2>
+
+  <p class="action edit"><a href="">Edit</a></p>
+
+  <form action="" method="post" class="update">
+    <p><button type="submit">Save</button></p>
+  </form>
+</section>
+-->
+
+<section id="vote">
+  <h2>Vote</h2>
+
+  <form action="" method="post" class="vote">
+    <p><button type="submit">It’s GOOD</button></p>
+  </form>
+
+  <!-- Currently we don’t support unvoting. -->
+  <form action="" method="post" class="voted">
+    <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
+  </form>
+</section>
+
+<section>
+  <div class="meta">
+
+    <!-- Post with no votes -->
+    <form action="" method="post" class="vote">
+      <p>
+        <button type="submit" title="Promote this">
+          Think it’s good?
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="vote loading">
+      <p>
+        <button type="submit" title="Promote this">
+          Think it’s good?
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="voted">
+      <p>
+        <button type="submit" title="1 person thinks this is good" disabled="disabled">
+          1
+        </button>
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<section>
+  <div class="meta">
+
+    <form action="" method="post" class="vote">
+      <p>
+        <button type="submit" title="12 people think this is good">
+          12
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="vote loading">
+      <p>
+        <button type="submit" title="12 people think this is good">
+          12
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="voted">
+      <p>
+        <button type="submit" title="13 people thinks this is good" disabled="disabled">
+          13
+        </button>
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<section id="do">
+  <h2>Do</h2>
+
+  <form action="" method="post" class="do">
+    <h6>Do It</h6>
+    <p>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
+    </p>
+  </form>
+
+  <form action="" method="post" class="doing">
+    <h6>To Do</h6>
+    <p>
+      <button type="submit" name="done" value="1">I did this</button>
+      <button type="submit" name="remove" value="1">Remove</button>
+    </p>
+  </form>
+
+  <form action="" method="post" class="done">
+    <h6>Done</h6>
+    <p>
+      <button type="submit" name="remove" value="1">Remove</button>
+    </p>
+  </form>
+
+</section>
+
+<section id="follow">
+  <h2>Follow</h2>
+
+  <form action="" method="post" class="follow">
+    <p><button type="submit">Follow</button></p>
+  </form>
+
+  <form action="" method="post" class="following">
+    <p><button type="submit">Following</button></p>
+  </form>
+</section>
+
+<section id="loading">
+  <h2>Loading Indicator</h2>
+
+  <p class="loading">Loading…</p>
+
+  <form action="" method="post" class="do">
+    <h6>Do It</h6>
+    <p>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <form action="" method="post" class="follow">
+    <p>
+      <button type="submit">Follow</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <p class="action">
+    <a href="">Load more results</a>
+    <span class="loading">Loading…</span>
+  </p>
+
+</section>
+
+</body>
+</html>

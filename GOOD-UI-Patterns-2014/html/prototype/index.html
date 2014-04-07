@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Prototype / Good</title>
+  <style type="text/css">    html, body, #outer-outer-container, #outer-container {
+      height: 100%;
+      min-height: 100%;
+    }
+    body {
+      font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: rgb(244, 245, 244);
+      color: rgb(0, 1, 0); /* @text-color */
+    }
+    header h1 {
+      margin-bottom: 0;
+    }
+    header h1 a,
+    header h1 a:visited {
+      color: inherit;
+    }
+    header h2 {
+      margin-top: 0;
+      font-style: normal;
+      color: #999;
+    }
+    a[href] {
+      color: rgb(110, 160, 26); /* @link-color */
+      text-decoration: none;
+    }
+    a[href]:hover,
+    a[href]:active,
+    a[href]:focus {
+      text-decoration: underline;
+    }
+    a[href]:visited {
+      color: #333;
+    }
+    ul, li {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    h3 {
+      margin-bottom: 0;
+    }
+    ul {
+      margin-top: 0.5em;
+      padding-left: 0.5em;
+    }
+    #container {
+      margin: 50px auto;
+    }
+    #outer-outer-container {
+      margin: 0 auto;
+      display: table;
+      padding: 2em;
+    }
+    #outer-container {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0 auto;
+    }
+    #container > section > section {
+      display: inline-block;
+      margin-right: 3em;
+      margin-bottom: 3em;
+      vertical-align: top;
+    }
+    li {
+      color: #bbb;
+    }
+    .optional a[href] {
+      color: rgb(49, 144, 242);
+    }
+    .optional a[href]:visited {
+      color: rgb(153, 153, 153);
+    }
+  </style>
+</head>
+<body>
+  <div id="outer-outer-container">
+    <div id="outer-container">
+      <div id="container">
+
+        <header>
+          <h1><a href="../../">Good</a></h1>
+          <h2>HTML Prototype</h2>
+        </header>
+
+        <section>
+          <section>
+            <h3>Introduction</h3>
+            <ul>
+              <!--
+              <li><a href="home.html">Featured</a></li>
+              <li><a href="popular.html">Popular</a></li>
+              <li><a href="newest.html">Newest</a></li>
+              <li><a href="for-you.html">For You</a></li>
+              -->
+              <li><a href="explore.html">Explore</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Topic</h3>
+            <ul>
+              <li><a href="topic.html">Posts</a></li>
+              <!--
+              <li><a href="topic-image.html">Posts (Image)</a></li>
+              <li><a href="topic-tagline.html">Posts (Tagline)</a></li>
+              <li><a href="topic-followers.html">Followers</a></li>
+
+              <li><a href="topic-changemakers.html">Changemakers</a></li>
+              <li><a href="topic-culture-jamming.html">Culture Jamming</a></li>
+              <li><a href="topic-infographics.html">Infographics</a></li>
+              <li><a href="topic-cities.html">Cities</a></li>
+              <li><a href="topic-travel.html">Travel</a></li>
+              <li><a href="topic-design.html">Design</a></li>
+              <li><a href="topic-education.html">Education</a></li>
+              <li><a href="topic-food.html">Food</a></li>
+              -->
+            </ul>
+          </section>
+          <section>
+            <h3>Post</h3>
+            <ul>
+              <li><a href="post-link.html">Link</a></li>
+              <!--
+              <li><a href="post-link-video.html">Link (Video)</a></li>
+              -->
+              <li><a href="post-action.html">Do</a></li>
+              <!--
+              <li><a href="post-action-slideshow.html">Do (Slideshow)</a></li>
+              -->
+            </ul>
+          </section>
+          <!--
+          <section>
+            <h3>Member</h3>
+            <ul>
+              <li><a href="member.html">Activity</a></li>
+              <li><a href="member-posts.html">Posts</a></li>
+              <li><a href="member-followers.html">Followers</a></li>
+              <li><a href="member-following.html">Following</a></li>
+              <li><a href="todos.html">Doing</a></li>
+              <li><a href="done.html">Done</a></li>
+            </ul>
+          </section>
+          -->
+          <section>
+            <h3>Search</h3>
+            <ul>
+              <li><a href="search.html">Results</a></li>
+              <li><a href="search-posts.html">Results (Posts)</a></li>
+              <li><a href="search-topics.html">Results (Topics)</a></li>
+              <li><a href="search-members.html">Results (Members)</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Join</h3>
+            <ul>
+              <li><a href="join.html">Join</a></li>
+              <li><a href="join-confirmation.html">Join (Confirmation)</a></li>
+              <li><a href="sign-in.html">Sign In</a></li>
+              <li><a href="forgot.html">Forgot</a></li>
+              <li><a href="forgot-success.html">Forgot (Confirmation)</a></li>
+              <li><a href="sign-out.html">Sign Out</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Account</h3>
+            <ul>
+              <li><a href="friends.html">Friends (Find)</a></li>
+              <li><a href="friends-invite.html">Friends (Invite)</a></li>
+              <!--
+              <li><a href="member-edit.html">Edit Profile</a></li>
+              -->
+              <li><a href="account.html">Manage (Account)</a></li>
+              <li><a href="account-email.html">Manage (Email)</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>New Post</h3>
+            <ul>
+              <li><a href="post-new-link.html">Link</a></li>
+              <li><a href="post-new-action.html">Do</a></li>
+            </ul>
+          </section>
+          <!--
+          <section>
+            <h3>Information</h3>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="advertise.html">Advertise</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="guidelines.html">Guidelines</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+              <li><a href="404.html">Error 404</a></li>
+              <li><a href="500.html">Error 500</a></li>
+            </ul>
+          </section>
+          -->
+        </section>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
