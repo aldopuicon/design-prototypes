@@ -44,11 +44,9 @@ body {
 
 .element-1 {
   float: left;
-  clear: both;
   z-index: 4;
   width: 100%;
   height: 30px;
-  margin-top: -30px;
   background-color: rgb(0, 0, 0);
 }
 
@@ -76,8 +74,10 @@ body {
 .image-1 {
   position: relative;
   float: left;
+  clear: both;
   z-index: 9;
   width: 490px;
+  margin-top: -30px;
 }
 
 .image-3 {
@@ -97,12 +97,11 @@ body {
 }
 
 .image-5 {
-  position: relative;
-  float: right;
-  clear: both;
+  position: fixed;
+  top: 29px;
+  right: 70px;
   z-index: 3;
-  width: 70px;
-  margin: -257px 70px 0 0;
+  width: 135px;
 }
 
 .image-6 {
