@@ -1,11 +1,11 @@
-
-
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Good</title>
+  <title>User Interface Kit / Good</title>
+    <link rel="stylesheet" href="assets/shared.css" />
+
   <style type="text/css">
     html, body, #outer-outer-container, #outer-container {
       height: 100%;
@@ -14,94 +14,407 @@
     body {
       font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
-      background: rgb(244, 245, 244);
+      background: rgb(255, 255, 255);
       color: rgb(0, 1, 0); /* @text-color */
     }
-    a {
-      color: rgb(110, 160, 26); /* @link-color */
-      text-decoration: none;
+    .logotype {
+          font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 1400%;
     }
-    a:hover,
-    a:active,
-    a:focus {
-      text-decoration: underline;
-    }
-    a:visited {
-      color: #333;
-    }
-    h1 {
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-    h2 {
-      margin-bottom: 0;
-      font-weight: normal;
-    }
-    h2 strong {
-      font-weight: bold;
-    }
-    h2 + p {
-      margin-top: 0;
-      max-width: 25em;
-    }
-    #container {
-      margin: 50px auto;
-    }
-    #outer-outer-container {
-      margin: 0 auto;
-      display: table;
-      padding: 2em;
-    }
-    #outer-container {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 0 auto;
-    }
-    #container > section > section {
-      float: left;
-      margin-right: 3em;
-    }
-      /* Logotype */
-  #header h2 {
-    font-size: inherit;
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-bottom: 0;
-  }
+
 
   </style>
+
 </head>
 <body>
-  <div id="outer-outer-container">
-    <div id="outer-container">
-      <div id="container">
+
 
         <header>
-          <h1>Good</h1>
+          <h1 class="logotype">GOOD</h1>
+          <h2>User Interface Kit</h2>
         </header>
 
-        <section>
-          <section>
-            <a href="html/prototype/">
-              <h2>HTML Prototype</h2>
-              <p>Pages, features, and example content</p>
-            </a>
-          </section>
-          <section>
-            <a href="html/patterns/">
-              <h2>HTML Patterns</h2>
-              <p>Reusable pieces of HTML, for new content and pages</p>
-            </a>
-          </section>
-          <section>
-            <a href="html/messages/">
-              <h2>Messages</h2>
-              <p>Notices that appear throughout the site</p>
-            </a>
-          </section>
-        </section>
 
-      </div>
-    </div>
+<div id="content">
+  <div class="container">
+
+    <nav class="sub">
+      <ul>
+        <li>
+          <a href="">
+            <span>Buttons</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Forms</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <span>Glyphs</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Typography</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Color</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Samples</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div><!-- /.container -->
+</div><!-- /#content -->
+
+<!-- /* Buttons */ -->
+
+<div id="content">
+  <div class="container">
+
+<div class="pattern">
+  <h3>Basic Buttons</h3>
+
+<section>
+  <form action="" method="post">
+    <p><button type="submit">Primary Button</button></p>
+  </form>
+</section>
+
+<section id="secondary">
+  <form action="" method="post" class="secondary">
+    <p><button type="submit">Secondary Button</button></p>
+  </form>
+</section>
+
+<section id="warning">
+  <form action="" method="post" class="warning">
+    <p><button type="submit">Warning Button</button></p>
+  </form>
+</section>
+
+<section id="vote">
+  <h3>Upvote Buttons</h3>
+
+  <form action="" method="post" class="vote">
+    <p><button type="submit">It’s GOOD</button></p>
+  </form>
+
+  <!-- Currently we don’t support unvoting. -->
+  <form action="" method="post" class="voted">
+    <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
+  </form>
+</section>
+
+<section>
+  <div class="meta">
+
+    <!-- Post with no votes -->
+    <form action="" method="post" class="vote">
+      <p>
+        <button type="submit" title="Promote this">
+          Think it’s good?
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="vote loading">
+      <p>
+        <button type="submit" title="Promote this">
+          Think it’s good?
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="voted">
+      <p>
+        <button type="submit" title="1 person thinks this is good" disabled="disabled">
+          1
+        </button>
+      </p>
+    </form>
+
   </div>
+</section>
+
+<section>
+  <div class="meta">
+
+    <form action="" method="post" class="vote">
+      <p>
+        <button type="submit" title="12 people think this is good">
+          12
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="vote loading">
+      <p>
+        <button type="submit" title="12 people think this is good">
+          12
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="voted">
+      <p>
+        <button type="submit" title="13 people thinks this is good" disabled="disabled">
+          13
+        </button>
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<section id="do">
+  <h3>DO Buttons</h3>
+
+  <form action="" method="post" class="do">
+    <h6>Do It</h6>
+    <p>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
+    </p>
+  </form>
+
+  <form action="" method="post" class="doing">
+    <h6>To Do</h6>
+    <p>
+      <button type="submit" name="done" value="1">I did this</button>
+      <button type="submit" name="remove" value="1">Remove</button>
+    </p>
+  </form>
+
+  <form action="" method="post" class="done">
+    <h6>Done</h6>
+    <p>
+      <button type="submit" name="remove" value="1">Remove</button>
+    </p>
+  </form>
+
+</section>
+
+<section id="follow">
+  <h3>Follow Buttons</h3>
+
+  <form action="" method="post" class="follow">
+    <p><button type="submit">Follow</button></p>
+  </form>
+
+  <form action="" method="post" class="following">
+    <p><button type="submit">Following</button></p>
+  </form>
+</section>
+
+<section id="loading">
+  <h3>Loading Indicator</h3>
+
+  <p class="loading">Loading…</p>
+
+  <form action="" method="post" class="do">
+    <h6>Do It</h6>
+    <p>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <form action="" method="post" class="follow">
+    <p>
+      <button type="submit">Follow</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <p class="action">
+    <a href="">Load more results</a>
+    <span class="loading">Loading…</span>
+  </p>
+
+</section>
+</div>
+
+  </div><!-- /.container -->
+</div><!-- /#content -->
+
+
+
+<!-- /* Forms */ -->
+<div id="content">
+  <div class="container">
+    
+<section>
+  <h3>Form</h3>
+  <form method="post">
+    <p class="text">
+      <label>
+        <span>Text Field</span><br />
+        <input type="text" name="text" />
+      </label>
+    </p>
+    <p class="text error">
+      <label>
+        <span>Text Field</span><br />
+        <input type="text" name="text" />
+      </label>
+      <strong class="error-message">Please enter your first name.</strong>
+    </p>
+    <p class="text">
+      <label>
+        <span>Email Field</span><br />
+        <input type="email" name="email" />
+      </label>
+    </p>
+    <p class="text">
+      <label>
+        <span>Textarea Field</span><br>
+        <textarea rows="6" cols="20" name="textarea" class="required"></textarea>
+      </label>
+    </p>
+    <p class="checkbox">
+      <label>
+        <input type="checkbox" name="checkbox" value="1" />
+        <span>Checkbox Field</span>
+      </label>
+    </p>
+    <section class="checkbox">
+      <h6>Group of Checkboxes</h6>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="a" value="1" />
+            <span>Option A</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="b" value="1" />
+            <span>Option B</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="c" value="1" />
+            <span>Option C</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="d" value="1" />
+            <span>Option D</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="e" value="1" />
+            <span>Option E</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+    <p class="submit"><button type="submit">Submit</button></p>
+  </form>
+</section>
+
+<section id="upload">
+  <h2>Upload</h2>
+
+  <p>
+    <label>
+      <span>Pick a post thumbnail</span><br />
+      <input type="file"><br />
+      <span>Upload an image… or choose one we found below (must be at least 240x240 pixels)</span>
+    </label>
+  </p>
+
+</section>
+  </div><!-- /.container -->
+</div><!-- /#content -->
+
+<!-- /* Glyphs */ -->
+
+
+<!-- /* Typography */ -->
+
+    <section>
+      <h1>Page Title</h1>
+      <h2>Commodo Consequat</h2>
+      <h3>Excepteur Sint</h3>
+      <h4>Aliquip ex ea Commodo Consequat</h4>
+      <h5>Fugiat Nulla Pariatur</h5>
+      <h6>Minim Veniam</h6>
+      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+    </section>
+
+  <header>
+    <h2>Header Navigation</h2>
+    <nav class="sub">
+      <ul>
+        <li>
+          <a href="">
+            <span>Activity</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Posts</span>
+            <strong>45</strong>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <span>Followers</span>
+            <strong>622</strong>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>Following</span>
+            <strong>40</strong>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Sub Navigation</h2>
+  <nav class="sub">
+    <ul>
+      <li>
+        <a href="">Lorem Ipsum</a>
+      </li>
+      <li class="active">
+        <a href="">Dolor Sit</a>
+      </li>
+      <li>
+        <a href="">Amet Consectetur</a>
+      </li>
+      <li>
+        <a href="">Elit</a>
+      </li>
+    </ul>
+  </nav>
+
+<!-- /* Colors */ -->
+
+<!-- /* Samples */ -->
+
+
+<script src="../../assets/shared.js"></script>
+
+  </div><!-- /.container -->
+</div><!-- /#content -->
+
 </body>
 </html>
