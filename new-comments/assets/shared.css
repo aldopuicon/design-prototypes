@@ -1,0 +1,6222 @@
+
+/*-----------------------------------------------
+    Shared Styles (for all screen sizes)
+  ----------------------------------------------- */
+
+  /* =Fonts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "GOOD";
+    src: url(shared/logotype.eot);
+    src: url(shared/logotype.eot?#iefix) format("eot"),
+         url(shared/logotype.woff)       format("woff"),
+         url(shared/logotype.ttf)        format("truetype"),
+         url(shared/logotype.svg#logotype)   format("svg");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Icons";
+    src: url(shared/site-icons.eot);
+    src: url(shared/site-icons.eot?#iefix) format("eot"),
+         url(shared/site-icons.woff)       format("woff"),
+         url(shared/site-icons.ttf)        format("truetype"),
+         url(shared/site-icons.svg#site-icons)  format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* =Third Party Fonts
+  -----------------------------------------------
+  This CSS resource incorporates links to font software which is the valuable copyrighted
+  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+  Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot);
+    src: url(third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot?#iefix) format("eot"),
+         url(third-party/4f2d0548-c7dc-459b-a2e0/e86656a10ded.woff)       format("woff"),
+         url(third-party/dc21d9e5-516f-4e7e-9a84/7be79a44c2dd.ttf)        format("truetype"),
+         url(third-party/a9bdb836-ee14-494d-8c69/5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Freight Text Light";
+    src: url(third-party/2c61d060-b821-44b0-9ef3/df033ba73b29.eot);
+    src: url(third-party/2c61d060-b821-44b0-9ef3/df033ba73b29.eot?#iefix) format("eot"),
+         url(third-party/1c750263-86c6-4341-a6e9/1b1a01cf0cd4.woff)       format("woff"),
+         url(third-party/bf3cfac2-4b5a-4e19-9287/91528eef23a6.ttf)        format("truetype"),
+         url(third-party/981e61ba-ddc5-4e86-9332/ce6d21a55161.svg#981e61ba-ddc5-4e86-9332-ce6d21a55161) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Trade Gothic Bold Condensed";
+    src: url(third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot);
+    src: url(third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot?#iefix) format("eot"),
+         url(third-party/5fdc935e-9e30-442a-bbe9/8d887b858471.woff)       format("woff"),
+         url(third-party/616c4c87-a077-43f4-a9f4/f01267c13818.ttf)        format("truetype"),
+         url(third-party/c901ad5f-a842-4549-a1f4/583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+  /* =Elements
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  body {
+    font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    margin: 0;
+    padding: 0;
+    background: rgb(249, 249, 250); /* @bright-white */
+    color: rgb(42, 43, 44); /* @text-color */
+  }
+  a {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+    text-decoration: none;
+  }
+
+  /* Fit media to the available width */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  iframe, object, embed {
+    width: 100%;
+  }
+
+  /* KLUDGE: Prevent the facebook recommendations from appearing too wide on small screens */
+  .fb-recommendations,
+  .fb-recommendations span,
+  .fb-recommendations iframe {
+    width: 100% !important;
+  }
+
+  a img {
+    border-width: 0;
+  }
+
+  iframe {
+    border-width: 0;
+  }
+
+  /* Older browsers sometimes render these inline */
+  header, footer, section, article, aside, nav, main {
+    display: block;
+  }
+
+
+  /* =Text
+  ----------------------------------------------- */
+
+  /* Margins */
+  h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
+  header, footer, section, article, aside, nav {
+    margin-top    : 0.875em; /* @line-height / 2 */
+    margin-bottom : 0.875em;
+  }
+  section, article, aside {
+    margin-top: 3.5em;
+    margin-bottom: 1.75em;
+  }
+  h1 + section,
+  h2 + section {
+    margin-top: 0.875em;
+  }
+  *:first-child {
+    margin-top: 0;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* For readability */
+  /*
+  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure,
+  .follow-list li {
+    max-width: 33em;
+  }
+  */
+
+  /* Headlines
+  KUDOS: http://typecast.com/blog/contrast-through-scale
+
+  10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60, 72
+  */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: inherit;
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
+  }
+
+  /* KLUDGE: Give vcards the same amount of margin as headlines (for the contact page) */
+  div.vcard {
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height   : 1.1666666667em; /* @line-height x 2 / 3 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+  }
+  h2 {
+    font-size: 2.25em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-top    : 0.7777777778em;
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  h3 {
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+
+    /* Add to the line-height and subtract from the margin
+    to make multi-line headlines easier to read. */
+    /*
+    line-height   : 1.25em; *//* (@line-height x 1.25) / 1.5 */
+    /*margin-top    : 0.75em;*/
+  }
+  h4 {
+    font-size: 1.3125em;
+    line-height   : 1.14285714285714em; /* @line-height / 1.3125 */
+    margin-top    : 1.14285714285714em;
+    margin-bottom : 0.57142857142857em;
+  }
+  h5 {
+    font-size: 1.125em;
+    line-height   : 1.33333333333333em; /* @line-height / 1.125 */
+    margin-top    : 1.33333333333333em;
+    margin-bottom : 0.66666666666667em;
+  }
+  h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+  }
+  h6 {
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  /* Experimental */
+  @media (max-width: 50em) {
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  /* Experimental */
+  @media (max-width: 30em) {
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
+  }
+
+  dt {
+    margin-top: 0.75em;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+  }
+  dd {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  figure .image {
+    background: rgb(249, 249, 249);
+    border: 1px solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  figure img {
+    display: block;
+    margin: 0 auto;
+  }
+  figcaption {
+    font-size: 0.75em;
+    line-height: 1.33333333333333;
+    padding: 1.86em 0;
+    border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    margin-bottom: 1.86em;
+  }
+
+  blockquote {
+    border-left: 0.125em solid rgb(178, 178, 178);
+    color: black;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 0 0 0 2.0625em; /* 0 0 0 33px */
+    margin: 2.1875em 0 2.1875em 0; /* 35px 50px 35px 0 */
+  }
+
+  @media (min-width: 25em) {
+    blockquote {
+      padding-right: 2.1875em; /* 35px */
+    }
+  }
+
+  @media (min-width: 40em) {
+    blockquote {
+      margin-right: 3.125em; /* 50px */
+    }
+  }
+
+  /* Search Results */
+  mark {
+    background-color: rgb(255, 249, 207);
+    padding: 0.25em;
+  }
+
+
+  /* =Paging
+  ----------------------------------------------- */
+  .pagination {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding: 1.25em 1.25em 0;
+    text-align: center;
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  .pagination:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .pagination ul,
+  .pagination li {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .pagination ul {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pagination li {
+    display: inline-block;
+  }
+  .pagination li a {
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+  }
+  .pagination li a:hover,
+  .pagination li a:active,
+  .pagination li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .pagination a {
+    display: inline-block;
+    padding: 0.5625em 0.875em; /* @line-height / 4      @line-height / 2 */
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+  }
+  .pagination .next     a,
+  .pagination .previous a {
+    font-weight: bold;
+
+    padding: 0.5625em 1.25em; /* @button-padding */
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
+  }
+  .pagination .next a {
+    background-color: rgb(113, 179, 247); /* @sky */
+    color: white;
+  }
+  .pagination .next a:hover,
+  .pagination .next a:active,
+  .pagination .next a:focus {
+    background-color: rgb(49, 144, 242);
+    color: white;
+  }
+  .pagination li.active a {
+    color: rgb(0, 1, 2); /* @midnight */
+  }
+  .pagination .previous a {
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .pagination .previous a:hover,
+  .pagination .previous a:active,
+  .pagination .previous a:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+  .pagination .previous {
+    margin-right : 0.875em;
+  }
+  .pagination .next {
+    float: right;
+    margin-left  : 0.875em;
+  }
+  @media (max-width: 39.9em) {
+    .pagination {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .pagination li {
+      font-size: 0.75em; /* 14px / @font-size */
+    }
+    .pagination .previous {
+      margin-right : 0.4375em;
+    }
+    .pagination .next {
+      margin-left  : 0.4375em;
+    }
+    .pagination a {
+      padding: 0.4375em;
+    }
+  }
+  .pagination .next:last-child {
+    margin-left: 0;
+  }
+  .pagination .previous:first-child:last-child {
+    margin-right: 0;
+  }
+
+
+  /* =Application
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Form
+  ----------------------------------------------- */
+  p.action,
+  form p.submit,
+  form p.submit + * {
+    margin-top: 1.75em; /* @line-height */
+  }
+  form .text label {
+    display: block;
+    padding-bottom: 0.7em;
+  }
+  form .select label {
+    display: block;
+    padding-bottom: 0.7em;
+  }
+  form label > span {
+    font-size: 0.9375em;
+    line-height: 1.6em; /* @line-height / 0.9375 */
+  }
+  form .text label > span {
+    display: block;
+  }
+  form .text label br {
+    display: none;
+  }
+  input[type="text"],
+  input[type="url"],
+  input[type="date"],
+  input[type="email"],
+  input[type="phone"],
+  input[type="search"],
+  input[type="password"],
+  textarea {
+    border-width: 0;
+    border-radius: 0;
+    border: 1px solid rgb(225, 225, 225); /* @bright-silver */
+
+    /* Give the field a width of 22em’s, but make it fit on small screens. */
+    max-width: 22em;
+    width: 100%;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: rgb(56, 52, 68);
+
+    /* TRICKY: Some browsers don’t allow line height to be
+    adjusted on text fields, so assume a line height of “normal”
+    and rely on padding to adjust to the vertical rythm. */
+    padding: 0.45em 0.6em;
+  }
+  textarea {
+    display: block;
+    margin: 0;
+
+    /* Give the field a width of 33em’s, but make it fit on small screens. */
+    max-width: 33em;
+    width: 100%;
+    height: 4.5em; /* line-height(~1.2em) + padding(0.45em) x 2 */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+  select {
+    font-size: inherit;
+  }
+
+  form .submit {
+    margin-top: 1.75em; /* @line-height */
+  }
+  form fieldset + .submit {
+    margin-top: 2.625em; /* @line-height x 3/2 */
+  }
+
+  form + form {
+    margin-top: 2.625em; /* @line-height x 3/2 */
+    border-width: 0;
+    border-top: 0.1em solid rgb(239, 239, 239);
+    position: relative;
+    padding: 1.75em 0 0 0;
+  }
+
+  /* For the email preferences page */
+  @media (min-width: 40em) {
+    form + form.secondary {
+      text-align: right;
+    }
+    form + form.secondary p {
+      display: inline;
+    }
+    form + form.secondary p + p {
+      margin-left: 0.875em;
+    }
+  }
+
+  form ul,
+  form li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  form ul.submit li {
+    display: inline;
+    margin-right: 1.5em;
+  }
+
+  form .note,
+  form label em {
+    color: rgb(139, 139, 139);
+    font-size: 0.875em; /* 12px / 16px */
+    font-style: italic;
+  }
+  form .note {
+    margin-top: 0.375em;
+    display: block;
+  }
+
+  form .error input[type="text"],
+  form .error input[type="email"],
+  form .error input[type="phone"],
+  form .error input[type="password"] {
+    border-color: rgb(255, 200, 200);
+  }
+  form .error-message {
+    color: rgb(225, 51, 51);
+    font-weight: normal;
+    display: block;
+  }
+
+  fieldset {
+    margin-top: 1.75em; /* @line-height */
+    border-width: 0;
+    border-top: 0.1em solid rgb(239, 239, 239);
+    position: relative;
+    padding: 1.75em 0 0 0;
+  }
+  fieldset:first-child {
+    border-top-width: 0;
+  }
+  legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+  }
+  fieldset + fieldset {
+    padding-top: 3.5em;
+  }
+  fieldset + fieldset legend {
+    top: 1.75em;
+  }
+
+
+  /* =Messages
+  ----------------------------------------------- */
+  section.message {
+    padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
+    background: rgb(255, 252, 231);
+    border: 0.1875em solid rgb(243, 239, 209);
+  }
+  section.message h1 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  section.message h1,
+  section.message p {
+    display: inline;
+  }
+  section.message p:before {
+    content: " — ";
+  }
+  section.message.error {
+    background: rgb(253, 235, 230);
+    border-color: rgb(251, 204, 204);
+  }
+  section.message.error p,
+  section.message.error li {
+    color: rgb(152, 94, 91);
+  }
+  section.message.success {
+    background: rgb(230, 253, 235);
+    border-color: rgb(184, 231, 184);
+  }
+  section.message.success p,
+  section.message.success li {
+    color: rgb(91, 152, 94);
+  }
+  section.message.empty h1,
+  section.message.empty p {
+    display: block;
+  }
+  section.message.empty h1 {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: inherit;
+
+    /* @h2 */
+    font-size: 2.25em;
+    line-height: 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  section.message.empty p:before {
+    content: "";
+  }
+  section.message.empty h1 + p {
+    margin-top: 0.875em; /* @line-height / 2 */
+    padding-top: 1.75em; /* @line-height */
+    border-top: 1px solid rgb(243, 239, 209);
+  }
+  section.message a {
+    color: inherit;
+  }
+
+  /* OPTIONAL: Add a close button to messages */
+  section.message {
+    position: relative;
+  }
+  section.message .close {
+    margin-top: 1.75em;
+    display: block;
+  }
+  @media (min-width: 30em) {
+    section.message {
+      padding-right: 8.75em;
+    }
+    section.message .close {
+      position: absolute;
+      top: 1.375em;
+      right: 2.625em;
+      margin: 0;
+    }
+  }
+
+  section.message p.close:before {
+    content: "";
+  }
+  section.message p.close a {
+    text-decoration: none;
+    display: block;
+  }
+  section.message p.close a:hover,
+  section.message p.close a:active,
+  section.message p.close a:focus {
+    color: black;
+  }
+  section.message p.close a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+    margin-left: 0.375em;
+  }
+
+  /* OPTIONAL: Add some space above the message if it appears within the sub navigation */
+  body > nav .message {
+    margin-top: 0.875em; /* @line-height / 2 */
+  }
+
+  .activity-list li > .message.success {
+    margin-top: 0;
+  }
+  .activity-list li > .message.success:last-child {
+    margin-bottom: 0.875em; /* @line-height / 2 */
+  }
+
+  section.message.spam h1:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 2.25em; /* 36px / @font-size(16px) */
+    margin-right: 0.5em;
+    color: rgb(229, 229, 229);
+    transition: color 0.2s;
+
+    /* TODO
+    background: transparent url(/assets/admin/shadow.png) bottom no-repeat;
+    padding-bottom: 0.25em;
+    */
+
+    content: "\e608"; /* @icon-ban */
+    color: #f33;
+  }
+
+  body > section.message {
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.75em;
+  }
+  body > section.message:first-child {
+    margin-bottom: 0;
+  }
+
+  .activity-item .message.success a {
+    text-decoration: underline;
+  }
+
+
+  /* =Site Introduction
+  ----------------------------------------------- */
+  /* TODO: Update all of the messages with a container and multiple close buttons, and make these the default styles. */
+  section.message.tip {
+    padding: 0;
+    line-height: 1.5;
+  }
+  section.message.tip h1 strong {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    color: rgb(153, 153, 102);
+  }
+  section.message.tip h1,
+  section.message.tip p {
+    font-size: 0.875em;
+  }
+  section.message.tip > .container {
+    padding: 0.875em 2.25em 0.875em 1.5em;
+    position: relative;
+  }
+  @media (min-width: 30em) {
+    section.message.tip {
+      padding-right: 0;
+    }
+    section.message.tip > .container {
+      position: relative;
+    }
+  }
+  @media (min-width: 40em) {
+    section.message.tip > .container {
+      padding-left: 2.25em;
+    }
+  }
+  body > section.message.tip {
+    max-width: none;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+  body > section.message.tip > .container {
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 71.8125em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.message.tip a {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  section.message.tip .close.primary {
+    margin-top: 0.875em;
+    position: static;
+    display: block;
+  }
+  section.message.tip .close.primary a {
+    color: rgb(47, 132, 218); /* @ocean */
+    display: inline;
+    text-decoration: underline;
+  }
+  section.message.tip .close.primary a:hover,
+  section.message.tip .close.primary a:active,
+  section.message.tip .close.primary a:focus {
+    text-decoration: none;
+  }
+  section.message.tip .close.primary a:after {
+    content: "";
+  }
+
+  section.message.tip .close.secondary {
+    display: block;
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    margin: 0;
+  }
+
+  @media (min-width: 40em) {
+    section.message.tip > .container {
+      padding-right: 4.75em;
+    }
+    section.message.tip .close.secondary {
+      top: 1.25em;
+      right: 3em;
+    }
+  }
+
+  section.message.tip .close.secondary a {
+    color: rgb(153, 153, 102);
+  }
+  section.message.tip .close.secondary a span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  section.message.tip .close.primary,
+  section.message.tip .close.secondary {
+    display: none;
+  }
+
+  /* OPTIONAL: Show the close buttons if they’re scripted */
+  .scripted-hide-tip section.message.tip .close.primary,
+  .scripted-hide-tip section.message.tip .close.secondary {
+    display: block;
+  }
+
+  /* OPTIONAL: Hide the community intro, if the user has pressed the “Hide” button */
+  .hide-community-intro #community-intro {
+    display: none;
+  }
+
+  /* OPTIONAL: Hide the details by default */
+  section.message.tip .details {
+    margin-top: 0.75em;
+  }
+  section.message.tip .details p:first-child:before {
+    content: "";
+  }
+  .message.has-details .show {
+    display: none;
+  }
+
+  .scripted-show-details .message.has-details .show {
+    display: inline;
+  }
+
+  /* Hide details */
+  .scripted-show-details .message .details {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* Make the headline appear pressable */
+  .scripted-show-details .message.has-details h1 {
+    cursor: pointer;
+  }
+
+  /* Show details */
+  .scripted-show-details .message.show-details .details {
+    position: static;
+    left: auto;
+  }
+  .scripted-show-details .message.show-details .show {
+    display: none;
+  }
+  .scripted-show-details .message.has-details.show-details h1 {
+    cursor: default;
+  }
+
+
+  /* =Links & Buttons
+  ----------------------------------------------- */
+  .scripted-do form.do    h6,
+  .scripted-do form.doing h6,
+  .scripted-do form.done  h6,
+  a .action span,
+  .action a,
+  button {
+    display: inline-block;
+    font-size: inherit;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    background-color: rgb(113, 179, 247); /* @sky */
+    color: white;
+    cursor: pointer;
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    font-weight: bold;
+
+    /* TODO: Consider changing this to an em value, and adjusting it
+    if the font size is changed (just like margins and line heights). */
+    border-radius: 2px;
+
+    line-height: 1.6875em;
+    padding: 0.5625em 1.25em;
+    transition: color 0.2s, background-color 0.2s, opacity 0.2s;
+  }
+  button[disabled] {
+    cursor: default;
+  }
+  a:hover  .action span,
+  a:active .action span,
+  a:focus  .action span,
+  .action a:hover,
+  .action a:active,
+  .action a:focus,
+  button:hover,
+  button:active,
+  button:focus {
+    background-color: rgb(49, 144, 242);
+  }
+
+  /* Vote */
+  .vote button {
+    background-color: rgb(113, 179, 247); /* @sky */
+  }
+  .voted button {
+    background-color: rgb(49, 144, 242);
+  }
+  .vote  button,
+  .voted button {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+  }
+  .vote button:hover,
+  .vote button:active,
+  .vote button:focus {
+    background-color: rgb(49, 144, 242);
+  }
+
+  /* OPTIONAL: Adjust the font size, for readability */
+  .vote  button,
+  .voted button {
+    font-size: 1.2em;
+    line-height: 1.40625em;
+    padding: 0.46875em 1.0416666667em;
+  }
+
+  /* Follow */
+  .follow button {
+    background-color: rgb(124, 227, 162); /* @moss */
+  }
+  .follow button:hover,
+  .follow button:active,
+  .follow button:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .following button {
+    background-color: rgb(64, 198, 149);
+  }
+  .following button:hover,
+  .following button:active,
+  .following button:focus {
+    background: rgb(255, 105, 105);
+  }
+
+  /* Do */
+  .scripted-do form.do h6,
+  .do button {
+    background-color: rgb(124, 227, 162); /* @moss */
+  }
+  .scripted-do form.do h6:hover,
+  .scripted-do form.do h6:active,
+  .scripted-do form.do h6:focus,
+  .do button:hover,
+  .do button:active,
+  .do button:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .scripted-do form.doing h6,
+  .doing button {
+    background-color: rgb(130, 242, 206);
+  }
+  .scripted-do form.doing h6:hover,
+  .scripted-do form.doing h6:active,
+  .scripted-do form.doing h6:focus,
+  .doing button:hover,
+  .doing button:active,
+  .doing button:focus {
+    background-color: rgb(110, 222, 186);
+  }
+  .scripted-do form.done h6,
+  .done button {
+    background: rgb(64, 198, 149);
+  }
+  .scripted-do form.done h6:hover,
+  .scripted-do form.done h6:active,
+  .scripted-do form.done h6:focus,
+  .done button:hover,
+  .done button:active,
+  .done button:focus {
+    background-color: rgb(80, 167, 135);
+  }
+
+  /* Secondary */
+  .comments button,
+  .secondary.action  a,
+  .secondary .action a,
+  .secondary button {
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .comments button:hover,
+  .comments button:active,
+  .comments button:focus,
+  .secondary.action a:hover,
+  .secondary.action a:active,
+  .secondary.action a:focus,
+  .secondary .action a:hover,
+  .secondary .action a:active,
+  .secondary .action a:focus,
+  .secondary button:hover,
+  .secondary button:active,
+  .secondary button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+
+  /* Warning */
+  .warning button {
+    background-color: rgb(247, 157, 130);
+  }
+  .warning button:hover,
+  .warning button:active,
+  .warning button:focus {
+    background-color: rgb(247, 113, 113);
+  }
+
+  /* OPTIONAL: Present the do buttons as drop-downs */
+  form.do    h6,
+  form.doing h6,
+  form.done  h6 {
+    margin-top: 0;
+    font-style: inherit;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+    margin-bottom: 0;
+  }
+  form.do    h6 + p,
+  form.doing h6 + p,
+  form.done  h6 + p {
+    margin-top: 0.4375em;
+  }
+  .scripted-do form.do    h6,
+  .scripted-do form.doing h6,
+  .scripted-do form.done  h6 {
+    font-style: normal;
+    font-size: inherit;
+    color: white;
+  }
+
+  .scripted-do form.do    h6 + p,
+  .scripted-do form.doing h6 + p,
+  .scripted-do form.done  h6 + p {
+    position: absolute;
+    z-index: 1;
+    background: white;
+    text-align: center;
+    border: 0.125em solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    transition: opacity 0.2s;
+    margin-top: 1em;
+  }
+  .scripted-do form.do    h6 + p,
+  .scripted-do form.doing h6 + p,
+  .scripted-do form.done  h6 + p {
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .scripted-do form.do.active    h6 + p,
+  .scripted-do form.doing.active h6 + p,
+  .scripted-do form.done.active  h6 + p {
+    left: auto;
+    opacity: 1;
+  }
+  .scripted-do form.do    h6 + p:after,
+  .scripted-do form.doing h6 + p:after,
+  .scripted-do form.done  h6 + p:after {
+    display: block;
+    content: "";
+    background: white;
+    border-width: 0.125em 0 0 0.125em;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    width: 1em;
+    height: 1em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    position: absolute;
+    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+    left: 50%;
+    margin-left: -0.5em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+  }
+  .scripted-do form.do    h6 + p button,
+  .scripted-do form.doing h6 + p button,
+  .scripted-do form.done  h6 + p button {
+    background: transparent;
+    border-width: 0;
+    color: rgb(101, 102, 102); /* @steel */
+    padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
+    min-width: 8em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    border-radius: 0;
+  }
+  .scripted-do form.do    h6 + p button + button,
+  .scripted-do form.doing h6 + p button + button,
+  .scripted-do form.done  h6 + p button + button {
+    border-top: 1px solid rgb(204, 204, 204);
+  }
+  .scripted-do form.doing button[name*="remove"],
+  .scripted-do form.done  button[name*="remove"] {
+    color: rgb(247, 157, 130);
+  }
+  .scripted-do form.doing button[name*="remove"]:hover,
+  .scripted-do form.doing button[name*="remove"]:active,
+  .scripted-do form.doing button[name*="remove"]:focus,
+  .scripted-do form.done  button[name*="remove"]:hover,
+  .scripted-do form.done  button[name*="remove"]:active,
+  .scripted-do form.done  button[name*="remove"]:focus {
+    color: rgb(247, 113, 113);
+  }
+  .scripted-do form.do    h6 + p button:hover,
+  .scripted-do form.do    h6 + p button:active,
+  .scripted-do form.do    h6 + p button:focus,
+  .scripted-do form.doing h6 + p button:hover,
+  .scripted-do form.doing h6 + p button:active,
+  .scripted-do form.doing h6 + p button:focus,
+  .scripted-do form.done  h6 + p button:hover,
+  .scripted-do form.done  h6 + p button:active,
+  .scripted-do form.done  h6 + p button:focus {
+    color: rgb(113, 179, 247); /* @sky */
+  }
+
+  /* OPTIONAL: Center the drop-down */
+  .scripted-do form.do,
+  .scripted-do form.doing,
+  .scripted-do form.done {
+    position: relative;
+    text-align: right;
+  }
+  .scripted-do form.do    h6 + p button,
+  .scripted-do form.doing h6 + p button,
+  .scripted-do form.done  h6 + p button {
+    min-width: 11em;
+  }
+  .scripted-do form.do.active    h6 + p,
+  .scripted-do form.doing.active h6 + p,
+  .scripted-do form.done.active  h6 + p {
+    right: -3em;
+  }
+
+  /* OPTIONAL: Add icons before the buttons */
+
+  /* Vote */
+  .vote button:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    margin-left: -2em;
+
+    content: "\e602"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .vote button {
+    margin-left: 1.5em;
+  }
+
+  /* Do */
+  .scripted-do form.do    h6:before,
+  .scripted-do form.doing h6:before,
+  .scripted-do form.done  h6:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.4375em;
+    position: absolute;
+    margin-left: -2.25em;
+  }
+  .scripted-do form.do    h6:before {
+    content: "\e604"; /* @icon-doing */
+    color: rgb(124, 227, 162); /* @moss */
+  }
+  .scripted-do form.doing h6:before {
+    content: "\e616"; /* @icon-doing */
+    color: rgb(130, 242, 206); /* @spindrift */
+  }
+  .scripted-do form.done  h6:before {
+    content: "\e615"; /* @icon-done */
+    color: rgb(64, 198, 149); /* @clover */
+  }
+  .scripted-do form.do    h6,
+  .scripted-do form.doing h6,
+  .scripted-do form.done  h6 {
+    margin-left: 2em;
+  }
+
+  /*
+  .scripted-do form.do    h6:before:hover,
+  .scripted-do form.do    h6:before:active,
+  .scripted-do form.do    h6:before:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .scripted-do form.doing h6:before:hover,
+  .scripted-do form.doing h6:before:active,
+  .scripted-do form.doing h6:before:focus {
+    background-color: rgb(110, 222, 186);
+  }
+  .scripted-do form.done  h6:before:hover,
+  .scripted-do form.done  h6:before:active,
+  .scripted-do form.done  h6:before:focus {
+    background-color: rgb(80, 167, 135);
+  }
+  */
+
+
+  /* =Loading
+  ----------------------------------------------- */
+
+  @-webkit-keyframes outerspin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+  }
+
+  @-webkit-keyframes innerspin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+  }
+
+  @-moz-keyframes outerspin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+  }
+
+  @-moz-keyframes innerspin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+  }
+
+  @keyframes outerspin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+  @keyframes innerspin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+  .loading {
+    position: relative;
+    font-weight: bold;
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  span.loading {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .loading:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.4375em; /* @line-height / 4 */
+    position: relative;
+    width: 1.3125em;
+    height: 1.3125em;
+    border: 0.21875em solid rgb(101, 102, 102); /* @steel */
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation : outerspin 1.3s infinite linear;
+       -moz-animation : outerspin 1.3s infinite linear;
+            animation : outerspin 1.3s infinite linear;
+  }
+  .loading:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.6125em;
+    height: 0.6125em;
+    top: 0.45em;
+    left: 0.35em;
+    border: 0.21875em solid rgb(101, 102, 102); /* @steel */
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-animation : innerspin 2s infinite linear;
+       -moz-animation : innerspin 2s infinite linear;
+            animation : innerspin 2s infinite linear;
+  }
+
+  /* OPTIONAL: Position the loading indicator above the form */
+  form.loading {
+    position: relative;
+    display: inline-block;
+  }
+  form.loading:before,
+  form.loading:after {
+    top: 50%;
+    left: 50%;
+  }
+  form.loading:before {
+    position: absolute;
+    margin-top: -0.875em;
+    margin-left: -0.875em;
+  }
+  form.loading:after {
+    position: absolute;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  /*
+  .form.loading .loading {
+    position: absolute;
+    margin-top: -0.9375em;
+    margin-left: -0.9375em;
+    top: 50%;
+    left: 50%;
+  }
+  */
+
+  /* OPTIONAL: Center the loading indicator, when it appears after pagination */
+  .pagination + .loading {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.75em;
+  }
+
+  /* OPTIONAL: Add space around a loading icon, when it appears after a button */
+  form p   button + .loading,
+  p.action      a + .loading {
+    margin: 0.4375em; /* @line-height / 2 */
+  }
+
+
+  /* =Layouts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Containers
+  ----------------------------------------------- */
+  #header {
+    margin-bottom: 0;
+  }
+  #header > .container {
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+  }
+  .topic-featured,
+  #header ~ #content {
+    /* @separator */
+    margin-top: 0;
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
+    padding-top: 1.75em;   /* @line-height */
+    padding-bottom: 3.5em; /* @line-height x 2*/
+  }
+  #header ~ #content.minimal {
+    border-top-width: 0;
+  }
+  .topic-featured {
+    padding-top    : 1.3125em; /* @line-height / 4 x 3 */
+    padding-bottom : 2.625em;  /* @line-height / 2 x 3 */
+  }
+  #footer {
+    margin-top: 0;
+
+    /* @separator */
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
+    padding-top: 1.75em; /* @line-height */
+
+    padding-bottom: 3.5em; /* @line-height x 2 */
+  }
+
+  body > header.sub > .container,
+  body > nav.sub    > .container,
+  .topic-header     > .container,
+  .topic-featured   > .container,
+  .member-header    > .container,
+  #header           > .container,
+  #content          > .container,
+  #footer           > .container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* On large screens, fill the available vertical space */
+  @media (min-width: 65em) {
+    #header > .container {
+      padding-top: 1.75em;
+      padding-bottom: 1.75em;
+    }
+  }
+  @media (min-width: 40em) {
+    body > header.sub > .container,
+    body > nav.sub    > .container,
+    .topic-header     > .container,
+    .topic-featured   > .container,
+    .member-header    > .container,
+    #header           > .container,
+    #content          > .container,
+    #footer           > .container {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+  }
+
+
+
+  /* =Pages
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Header
+  ----------------------------------------------- */
+  #header {
+    margin-top: 0
+  }
+  #header > .container {
+    position: relative;
+  }
+  #header > .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #header nav ul,
+  #header nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  /* Logotype */
+  #header h2 {
+    font-size: inherit;
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+  }
+  #header h2 a {
+    text-decoration: none;
+    color: rgb(0, 1, 2); /* @midnight */
+    font-size: 4.5em;
+    line-height: 1;
+  }
+  #header h2 a:hover,
+  #header h2 a:active,
+  #header h2 a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  #header h2 + p {
+    font-weight: bold;
+    margin-bottom: 0;
+    /*
+    border-top: 0.1em solid rgb(221, 221, 221);
+    */
+    padding-top: 1em;
+  }
+  @media (min-width: 30em) {
+    #header h2,
+    #header h2 + p {
+      display: inline;
+    }
+    #header h2 {
+      margin-right: 1.75em;
+    }
+    #header h2 a {
+      vertical-align: -29%;
+    }
+    #header h2 + p {
+      padding-top: 0;
+      border-top-width: 0;
+    }
+  }
+
+  /* OPTIONAL: Line up with the large type on member pages */
+  @media (min-width: 65em) {
+    #header h2 {
+      margin-right: 6.875em; /* @line-height x 7.5 - logotype.width(6.25em) */
+    }
+  }
+
+  @media (max-width: 64.9em) {
+    #header h2 + p {
+      font-size: 0.75em;
+      margin-top: 0.5em; /* @line-height(1.75em) x 3/2 / font-size(0.75em) */
+    }
+  }
+
+  @media (max-width: 38.9em) {
+    #header h2 + p {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  /* OPTIONAL: Make the logotype fit on small screens */
+  @media (max-width: 64.9em) {
+    #header h2 a {
+      font-size: 3em;
+    }
+  }
+
+  #footer h2 a {
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    margin-left: 0.75em;
+  }
+
+
+  #header .primary {
+    margin-bottom: 0;
+  }
+  @media (min-width: 65em) {
+    #header .primary {
+      margin-top: 1.75em;
+    }
+  }
+
+  /*
+  @media (max-width: 59.9em) {
+    #header .search {
+      padding: 0.875em 1.75em 1.75em;
+    }
+  }
+
+  #header .search,
+  #header .search form {
+    margin-top: 0;
+  }
+  */
+
+  /* Search */
+  #header .search label span {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  #header .search input {
+    width: 10em;
+    max-width: 100%;
+    border-radius: none;
+  }
+  @media (min-width: 25em) {
+    #header .search input {
+      width: 14em;
+    }
+  }
+  @media (min-width: 30em) {
+    #header .search input {
+      width: 20em;
+    }
+  }
+
+  #header .search button {
+    font-size: 0.875em;
+    padding: 0.45em 1em;
+  }
+
+
+
+
+  /* Options */
+  #header .options {
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  #header .options ul {
+    margin-bottom: 0;
+  }
+  #header .options li a {
+    display: block;
+    padding: 0.875em 0;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    border-top: 0.1em solid rgb(221, 221, 221);
+    color: rgb(101, 102, 102); /* @steel */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  #header .primary .options li:first-child a {
+    border-top-width: 0;
+  }
+  #header .options li a:hover,
+  #header .options li a:active,
+  #header .options li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  #header .search {
+    border-top: 0.1em solid rgb(221, 221, 221);
+    margin-top: 0;
+    padding-top: 0.875em;
+  }
+  #header.has-account .search {
+    margin-bottom: 0;
+  }
+
+
+  #header .account h3 a {
+    display: block;
+  }
+  #header .account h3 img {
+    display: block;
+    border: 1px solid rgb(42, 43, 44);
+  }
+
+  /* Join */
+  #header .join {
+    margin: 0.4375em 0 0 0;
+    position: absolute;
+    top: 1.3em; /* @header-top-margin */
+    right: 6em;
+    color: rgb(178, 178, 178);
+    font-style: italic;
+  }
+  @media (min-width: 50em) {
+    #header .join {
+      right: 16em;
+    }
+  }
+  @media (min-width: 65em) {
+    #header .join {
+      position: static;
+      display: inline;
+      margin-left: 1em;
+    }
+  }
+  #header .join a {
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  #header .join a:hover,
+  #header .join a:active,
+  #header .join a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* OPTIONAL: Add a little space around the word “or” */
+  #header .join a:first-child {
+    margin-right: 0.125em;
+  }
+  #header .join a:last-child {
+    margin-left: 0.125em;
+  }
+
+  #header .account h3 {
+    margin: 0;
+    position: absolute;
+    top: 1.3em; /* @header-top-margin */
+    right: 6em;
+    font-size: inherit;
+  }
+
+  @media (min-width: 65em) {
+    #header .join,
+    #header .account h3 {
+      top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+  @media (min-width: 50em) {
+    #header .account h3 {
+      right: 15.75em;
+    }
+  }
+
+  @media (min-width: 50em) {
+    #header .primary ul,
+    #header .primary li {
+      display: inline;
+    }
+    #header .primary h4 {
+      display: inline-block;
+      vertical-align: top;
+    }
+    #header .primary ul {
+      margin: 0;
+      position: absolute;
+      top: 1.3em; /* @header-top-margin */
+      right: 5em;
+
+      /*
+      border-right: 0.1em solid rgb(239, 239, 239);
+      padding-right: 0.4375em;
+      */
+    }
+    #header .primary li a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: inherit;
+      line-height: 1.5em;
+      padding: 0.5625em 0.875em;
+      color: rgb(101, 102, 102);
+      border-radius: 0.125em;
+      border-width: 0;
+    }
+  }
+  @media (min-width: 65em) {
+    #header .primary ul {
+      top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+
+  /* These headlines are redundant */
+  #header .primary h3,
+  #header .search h4 {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  #header .search form {
+    margin-top: 0;
+  }
+
+  /* OPTIONAL: Present the account navigation as a dropdown */
+  .scripted-nav #header .account {
+    margin-top: 0;
+  }
+  .scripted-nav #header .account.active {
+    margin-top: 0.875em;
+  }
+  .scripted-nav #header .account .options {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .scripted-nav #header .account.active .options {
+    margin-top: 1.5em;
+    position: static;
+    left: auto;
+    background: white;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    padding: 0.25em 0 0.25em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-bottom: -1.25em;
+  }
+  .scripted-nav #header .account.active .options a {
+    padding-left: 1.7142857143em; /* 1.5em / 0.875em */
+    padding-right: 1.7142857143em;
+  }
+  .scripted-nav #header .account .options li:first-child a {
+    border-top-width: 0;
+  }
+  @media (min-width: 40em) {
+    .scripted-nav #header .account.active .options {
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+    .scripted-nav #header .account.active .options a {
+      padding-left: 2.5714285714em; /* 2.25em / 0.875em */
+      padding-right: 2.5714285714em;
+    }
+    .scripted-nav #header .primary h4 {
+      top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+  .scripted-nav #header .primary.active .options {
+    position: static;
+    left: auto;
+  }
+
+  /* OPTIONAL: Present the primary navigation as a drop-down (on small screens) */
+  @media (max-width: 49.9em) {
+    .scripted-nav #header .primary {
+      margin: 0;
+    }
+    .scripted-nav #header .primary .options {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+    .scripted-nav #header .primary.active .options {
+      margin-top: 1.5em;
+      position: static;
+      left: auto;
+      background: white;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: rgb(139, 139, 139);
+      padding: 0.25em 0 1.5em;
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+      margin-bottom: -1.25em;
+    }
+    .scripted-nav #header .primary.active .search {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+    .scripted-nav #header .primary.active .options a {
+      padding-left: 2.5714285714em; /* 2.25em / 0.875em */
+      padding-right: 2.5714285714em;
+    }
+
+    .scripted-nav #header .primary h3 {
+      position: absolute;
+      left: auto;
+      right: 2.25em;
+      top: 1.3em; /* @header-top-margin */
+
+      font-size: inherit;
+      background: transparent url(shared/header/nav.png) no-repeat center;
+      background-image: url(shared/header/nav.svg), none;
+      background-size: auto 1em;
+      border: 1px solid transparent;
+      margin: 0;
+      cursor: pointer;
+
+      width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
+      height : 2.5em;
+
+      /* @hidden-accessible-text */
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+    /*
+    .scripted-nav #header .primary.active h3 {
+      background-color: white;
+      background-image: url(shared/header/close.svg);
+      border: 1px solid rgb(139, 139, 139);
+    }
+    */
+  }
+  @media (max-width: 39.9em) {
+
+    .scripted-nav #header .primary.active .options {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+    .scripted-nav #header .primary.active .search {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    .scripted-nav #header .primary.active .options a {
+      padding-left: 1.7142857143em; /* 1.5em / 0.875em */
+      padding-right: 1.7142857143em;
+    }
+    .scripted-nav #header .primary h3 {
+      right: 1.5em;
+    }
+  }
+
+  /* OPTIONAL: Present the search form as a drop-down (on mid-size and larger screens) */
+  @media (min-width: 50em) {
+    .scripted-nav #header .primary {
+      margin-top: 0;
+    }
+    .scripted-nav #header .primary.active {
+      margin-top: 1.75em;
+    }
+    .scripted-nav #header .search {
+      border-top-width: 0;
+      padding-top: 0;
+    }
+    .scripted-nav #header .active .search {
+      /*
+      border-top: 0.1em solid rgb(221, 221, 221);
+      */
+      margin-top: 0;
+      padding-top: 0.875em;
+    }
+    .scripted-nav #header .search form {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+    .scripted-nav #header .active .search form {
+      position: static;
+      left: auto;
+    }
+    .scripted-nav #header .primary h4 {
+      position: absolute;
+      left: auto;
+      right: 2.25em;
+      top: 1.3em; /* @header-top-margin */
+
+      font-size: inherit;
+      background: transparent url(shared/header/lense.png) no-repeat center;
+      background-image: url(shared/header/lense.svg), none;
+      background-size: auto 1em;
+      border: 1px solid transparent;
+      margin: 0;
+      cursor: pointer;
+
+      width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
+      height : 2.5em;
+      text-align: left;
+
+      /* @hidden-accessible-text */
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+  @media (min-width: 65em) {
+    .scripted-nav #header .primary h4 {
+      top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+  @media (min-width: 50em) {
+    .scripted-nav #header .primary.active,
+    .scripted-nav #header .account.active,
+    .scripted-nav #header .account.active .options {
+      margin: 0;
+    }
+    .scripted-nav #header .active .search {
+      padding-top: 0;
+    }
+    .scripted-nav #header .active .search.active h4 {
+      background: white url(shared/header/close.png) no-repeat center;
+      background-image: url(shared/header/close.svg), none;
+      background-size: auto 1em;
+      background-color: white;
+      border: 1px solid rgb(139, 139, 139);
+    }
+    .scripted-nav #header .active .search form {
+      position: absolute;
+      left: -9999px;
+    }
+    .scripted-nav #header .account.active .options,
+    .scripted-nav #header .active .search.active form {
+      position: absolute;
+      top: 3.75em;
+      left: auto;
+      right: 2.25em;
+
+      /* @dropdown */
+      background: white;
+      border: 1px solid rgb(139, 139, 139);
+      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+      padding: 0.25em 1.125em;
+
+      z-index: 1;
+    }
+    .scripted-nav #header .active .search.active form {
+      padding-top: 0.75em;
+      padding-bottom: 1.125em;
+    }
+    .scripted-nav #header .account.active .options {
+      right: 15.75em;
+    }
+    .scripted-nav #header .account.active .options ul {
+      margin-left: -1.125em;
+      margin-right: -1.125em;
+    }
+    .scripted-nav #header .account.active .options a {
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+      min-width: 15em;
+    }
+  }
+  @media (min-width: 65em) {
+    .scripted-nav #header .account.active .options,
+    .scripted-nav #header .active .search.active form {
+      top: 5.2em;
+    }
+  }
+
+
+
+  /* =Footer
+  ----------------------------------------------- */
+  #footer section {
+    margin-right: 3em;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    margin-bottom: 3em;
+  }
+  #footer section:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    /* @primary-column */
+    #footer section:first-child {
+      width: 69.25%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+  #footer section h2,
+  #footer section h2 + p {
+    display: inline;
+  }
+  #footer h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  #footer ul {
+    font-size: 0.75em;
+    margin-top: 1.1666666667em;
+  }
+  #footer section + section ul {
+    margin-top: 0.65625em;
+    font-size: inherit;
+  }
+  #footer p:last-child {
+    font-size: 0.75em;
+
+    /* KLUDGE: Reduce the amount of space above the copyright statement. */
+    margin-top: -1.75em;
+
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+  #footer ul,
+  #footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #footer li {
+    display: inline;
+    margin-right: 1em;
+  }
+  #footer p.rss        a,
+  #footer li.facebook  a,
+  #footer li.twitter   a,
+  #footer li.instagram a,
+  #footer li.tumblr    a {
+
+    /* @icon-ligatures */
+    font-family: "Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Enable Ligatures */
+    -webkit-font-feature-settings: "liga";
+       -moz-font-feature-settings: "liga=1";
+       -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+         -o-font-feature-settings: "liga";
+            font-feature-settings: "liga";
+
+    color: rgb(70, 70, 70); /* @iron */
+    font-weight: normal;
+    line-height: 1
+  }
+  #footer p.rss {
+    margin-left: 0.25em;
+  }
+  #footer p.rss a {
+    color: rgb(204, 204, 204);
+    font-size: 0.75em;
+  }
+  #footer p.rss a:hover,
+  #footer p.rss a:active,
+  #footer p.rss a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  #footer p.rss a,
+  #footer li    a {
+    text-decoration: none;
+  }
+  #footer li a {
+    color: inherit;
+    font-weight: bold;
+  }
+  #footer li a:hover,
+  #footer li a:active,
+  #footer li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Sub Nav
+  ----------------------------------------------- */
+  body > nav {
+    background: white;
+    margin: 0;
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */;
+  }
+  body > nav:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  body > nav > .container {
+    max-width: 66.5625em; /* @max-page-width */
+    margin: 0 auto;
+  }
+  body > nav.sub ul,
+  body > nav.sub li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  body > nav.sub p,
+  body > nav.sub ul,
+  body > nav.sub li {
+    display: inline;
+  }
+  body > nav.sub li {
+    display: inline;
+  }
+  body > nav.sub .rss a,
+  body > nav.sub li a {
+    color: rgb(102, 103, 104);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    font-size: 0.75em; /* 12px / @font-size */
+    line-height: 2.3333333333em; /* @line-height(1.75em) / font-size(0.75em) */
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
+    padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+  }
+
+  /* For the “Want to make changes to your profile?” note, in the account settings section */
+  body > nav.sub .note {
+    float: right;
+    font-size: 0.875em;
+  }
+
+  body > nav.sub li a {
+    margin-right: 0.55em;
+  }
+  @media (min-width: 30em) {
+    body > nav.sub li a {
+      margin-right: 2.3333333334em;
+    }
+    body > nav.sub li:last-child a {
+      margin-right: 0;
+    }
+  }
+  body > nav.sub .active a {
+    color: rgb(0, 1, 2); /* @black */
+    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
+  }
+  body > nav.sub .rss a {
+    color: rgb(221, 223, 227); /* @silver-blue */
+  }
+  body > nav.sub .rss a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 0.875em;
+    content: "\e610"; /* @icon-rss */
+    color: rgb(221, 223, 227); /* @silver-blue */
+    margin-left: 0.875em;
+    transition: color 0.2s;
+  }
+  body > nav.sub a:hover,
+  body > nav.sub a:active,
+  body > nav.sub a:focus,
+  body > nav.sub .rss a:hover:after,
+  body > nav.sub .rss a:active:after,
+  body > nav.sub .rss a:focus:after {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  body > nav.sub .rss {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  @media (max-width: 29.9em) {
+    body > nav.sub .rss a:after {
+      margin-left: 0;
+    }
+    body > nav.sub .rss abbr {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+
+  /* =Header Navigation
+  ----------------------------------------------- */
+  body * nav.sub {
+    max-width: none;
+    color: rgb(102, 103, 104);
+    position: relative;
+  }
+
+  body #content nav.sub {
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  body #content p + nav.sub {
+    border-top: 0.1em solid rgb(233, 233, 233);
+    margin-top  : 1.75em; /* @line-height */
+    padding-top : 0.875em;
+  }
+
+  body * nav.sub ul,
+  body * nav.sub li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  body * nav.sub ul {
+    margin: 0;
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2em;          /* @line-height / 0.875 */
+  }
+  body * nav.sub ul:first-child {
+    margin-left: -0.875em;
+  }
+  body * nav.sub li {
+    display: inline;
+    border-right: 0.1em solid rgb(215, 216, 217);
+  }
+  body * nav.sub li:first-child {
+    margin-left: 0;
+  }
+  body * nav.sub li:last-child {
+    border-right-width: 0;
+  }
+
+  body * nav.sub a {
+    color: inherit;
+    font-weight: bold;
+    padding: 0.5em 1em 0 1em;
+    text-decoration: none;
+    display: inline-block;
+  }
+  body * nav.sub a:hover,
+  body * nav.sub a:active,
+  body * nav.sub a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  body * nav.sub a:after {
+    content: "";
+    display: block;
+    padding-bottom: 0.1428571429em;
+    border-bottom: 0.3571428571em solid transparent;
+  }
+  body * nav.sub .active a {
+    color: rgb(0, 1, 2);  /* @midnight */
+  }
+  body * nav.sub .active a:after {
+    border-bottom-color: rgb(0, 1, 2); /* @black */
+  }
+  body * nav.sub li span {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-size: 0.8571428571em; /* 12px / 14px */
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  body * nav.sub form {
+    margin: -0.1em 1.75em -0.1em 0;
+    float: left;
+  }
+
+  /* OPTIONAL: Attempt to get the topic navigation to fit on small screens */
+  @media (max-width: 24.9em) {
+    body .topic-header nav.sub form {
+      margin-top: 0.25em;
+      font-size: 0.75em;
+      margin-right: 0;
+      float: none;
+    }
+    body * nav.sub ul {
+      margin-top: 0.875em;
+      margin-left: -0.875em;
+    }
+  }
+
+  /* OPTIONAL: Make more space for the follow button */
+  body > header.sub nav.sub,
+  .topic-header  nav.sub,
+  .member-header nav.sub {
+    margin-top    : 1.75em; /* @line-height */
+    margin-bottom : 1.75em; /* @line-height */
+  }
+
+  /* OPTIONAL: Make the navigation fit nicely on small screens */
+  @media (max-width: 24.9em) {
+    body * nav.sub {
+      margin-left  : -1.5em;
+      margin-right : -1.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+
+  /* OPTIONAL: Hide the main headline on home, topic, and member pages
+  (since they’re redundant with the navigation) */
+  /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
+  body > nav.sub    ~ #content > .container > .home   > h1:first-child,
+  body > header.sub ~ #content > .container > section > h1:first-child,
+  .topic-header     ~ #content > .container > section > h1:first-child,
+  .member-header    ~ #content > .container > section > h1:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  body > nav.sub    ~ #content > .container > .home   > h1 + *,
+  body > header.sub ~ #content > .container > section > h1 + *,
+  .topic-header     ~ #content > .container > section > h1 + *,
+  .member-header    ~ #content > .container > section > h1 + * {
+    margin-top: 0;
+  }
+
+
+  /* =Aside Navigation
+  ----------------------------------------------- */
+  aside nav {
+    color: rgb(102, 103, 104);
+  }
+  aside nav ul,
+  aside nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  aside nav ul {
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2em;          /* @line-height / 0.875 */
+  }
+  aside nav li a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  aside nav li a:hover,
+  aside nav li a:active,
+  aside nav li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+  /* =Social
+  ----------------------------------------------- */
+  aside .social h2 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-bottom : 0.5833333334em;
+  }
+  aside .social ul,
+  aside .social li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  aside .social li {
+    display: inline;
+    margin-right: 1em;
+  }
+  aside .social a {
+    text-decoration: none;
+
+    /* @icon-ligatures */
+    font-family: "Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Enable Ligatures */
+    -webkit-font-feature-settings: "liga";
+       -moz-font-feature-settings: "liga=1";
+       -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+         -o-font-feature-settings: "liga";
+            font-feature-settings: "liga";
+
+    color: rgb(70, 70, 70); /* @iron */
+    font-weight: normal;
+    font-size: 1.25em;
+  }
+  aside .social a:hover,
+  aside .social a:active,
+  aside .social a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+  /* =Content
+  ----------------------------------------------- */
+  .topic-featured,
+  #content {
+    background: rgb(253, 254, 255); /* @snow */
+  }
+  #content.minimal {
+    background: transparent;
+  }
+  #content.minimal > .container {
+    min-height: 0;
+  }
+  #content.minimal ~ #footer {
+    border-top-width: 0;
+  }
+
+  @media (min-height: 50em) {
+    #content > .container {
+      min-height: 33em;
+    }
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+
+    /* @column-container */
+    #content > .container:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* @primary-column */
+    #content .has-aside {
+      margin-top: 0;
+      float: left;
+      width: 69.25%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+
+    #content .has-aside > .comments,
+    #content .has-aside > .popular-posts,
+    #content .has-aside .activity > header,
+    #content .has-aside .follow-list,
+    #content .has-aside .activity-list,
+    #content .has-aside .pagination {
+      margin-right: -1.75em;
+    }
+    #content .has-aside .popular-posts .activity-list {
+      margin-right: 0;
+    }
+
+    #content .has-aside {
+      padding-right: 1.75em;
+      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    }
+
+    /* @aside-column */
+    #content .has-aside + aside {
+      margin-top: 0;
+      float: right;
+      width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+
+  /* =Experimental
+  ----------------------------------------------- */
+
+  /* Use less margin above and below ads, when they appear in an “activity” or “follow” list */
+  li aside.ads {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* OPTIONAL: Make ads take up the full width of the window on small screens */
+  aside.ads {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+  @media (min-width: 40em) {
+    aside.ads {
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+  }
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    aside.ads {
+      margin: 0;
+    }
+  }
+
+  /* Show or hide ads, depending on the screen size. */
+  .w300.h250,
+  .w728.h90,
+  .w468.h60,
+  .w300.h50 {
+    text-align: center;
+  }
+
+  .post .w300.h250,
+  .post .w728.h90,
+  .post .w468.h60,
+  .post .w300.h50 {
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+  }
+
+  /* OPTIONAL: Make ads take up the full width of the window on small screens */
+  @media (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside + aside {
+      text-align: center;
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+  }
+
+  /* OPTIONAL: Center the ads on medium size screens */
+  @media (min-width: 40em) and (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside .ads.has-multiple {
+      text-align: center;
+    }
+    .has-aside .ads.has-multiple .ad,
+    .has-aside + aside .ad,
+    aside .promotion,
+    aside section.facebook,
+    aside .fb-recommendations {
+      text-align: left;
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 0 !important;
+      margin-bottom: 1.75em !important;
+      margin-left: 0.5em !important;
+      margin-right: 0.5em !important;
+    }
+    .has-aside + aside .ad,
+    aside .promotion,
+    aside section.facebook,
+    aside .fb-recommendations {
+      width: 18.75em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+
+  /* Switch between ads in a set, based on width
+  ----------------------------------------------- */
+
+  /* Show thin ads by default */
+  .w468.h60,
+  .w728.h90 {
+    display: none;
+  }
+  .w300.h50 {
+    display: block;
+  }
+
+  @media (min-width: 468px) { /* 468px */
+    .w300.h50,
+    .w728.h90 {
+      display: none;
+    }
+    .w468.h60 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 728px) { /* 728px */
+    .w300.h50,
+    .w468.h60 {
+      display: none;
+    }
+    .w728.h90 {
+      display: block;
+    }
+  }
+
+
+  /* Switch between ads in a set, based on height
+  ----------------------------------------------- */
+
+  /* Show short ads by default */
+  .w300.h600 {
+    display: none;
+  }
+  .w300.h250 {
+    display: block;
+  }
+
+  @media (min-height: 600px) { /* 600px */
+    .w300.h600 + .w300.h250 {
+      display: none;
+    }
+    .w300.h600 {
+      display: block;
+    }
+  }
+
+
+  /* Switch between ads in the content area and the aside, depending on screen width
+  ----------------------------------------------- */
+
+  .has-aside .s1,
+  .has-aside .s2,
+  .has-aside .s3 {
+    display: block;
+  }
+  .has-aside + aside {
+    display: none;
+  }
+
+  .has-aside .ads.has-multiple .ad + .ad {
+    display: none;
+  }
+
+  @media (min-width: 40em) {
+    .has-aside .ads.has-multiple .ad + .ad {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .has-aside + aside {
+      display: block;
+    }
+    .has-aside .s1,
+    .has-aside .s2,
+    .has-aside .s3 {
+      display: none;
+    }
+    .has-aside + aside .s1,
+    .has-aside + aside .s2,
+    .has-aside + aside .s3  {
+      display: block;
+    }
+  }
+
+
+
+/* =Connect with Facebook Friends
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .connect-facebook {
+    margin-top: 0;
+    margin-bottom: 0;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+
+    padding: 3.5em 0;
+    background-color: rgb(222, 222, 222);
+  }
+  .connect-facebook h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(136, 137, 137);
+    padding-left: 0.875em; /* @line-height / 2 */
+  }
+  .connect-facebook .container {
+    background: transparent url(shared/home/friends.jpg) no-repeat 50% 5.25em; /* @line-height x 3 */
+
+    min-height: 34.875em; /* image-height(474px) + 5.25em */
+    max-width: 66.5625em; /* @max-page-width */
+    margin: 0 auto;
+  }
+  .connect-facebook .container > a {
+    background: white;
+    border: 0.3125em solid rgb(239, 239, 239);
+    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
+    display: table;
+    margin: 9em auto 0;
+    padding: 1.75em 2.625em 2.625em; /* @line-height x 1.5 */
+    text-decoration: none;
+    color: inherit;
+  }
+  .connect-facebook p:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+
+/* =Join Introduction
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .join-intro {
+    background-color: rgb(105, 206, 155);
+    padding: 1.5em 3em;
+    color: white;
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .join-intro {
+      border-top-left-radius  : 0.25em;
+      border-top-right-radius : 0.25em;
+    }
+  }
+
+  body > .join-intro {
+    max-width: 66.5625em; /* @max-page-width */
+    margin: 0 auto;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+
+  .join-intro h1 {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-size: 3.75em; /* 60px / 16px */
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .join-intro form {
+    background: rgb(88, 175, 130);
+    border: 1px solid rgb(92, 157, 124);
+    padding: 1.75em;
+  }
+  .join-intro form:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .join-intro form p:first-of-type {
+    font-weight: bold;
+  }
+  .join-intro button {
+    /* Data URI encoded from: ocean.svg */
+    background: rgb(27, 128, 234) url(data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMzcsIDEzOSwgMjQ1KSIgLz4KICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMjcsIDEyOCwgMjM0KSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPgogICAg) top repeat-x;
+    background-size: contain;
+    padding: 0.45em 1em;
+  }
+  .join-intro button:hover,
+  .join-intro button:active,
+  .join-intro button:focus {
+    /* Data URI encoded from: dark-ocean.svg */
+    background: rgb(13, 112, 215) url(data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMjcsIDEyOCwgMjM0KSIgLz4KICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMTMsIDExMiwgMjE1KSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPgogICAg) top repeat-x;
+    background-size: contain;
+  }
+  .supports-placeholder .join-intro label span {
+    position: absolute;
+    left: -9999px;
+  }
+  @media (max-width: 59.9em) {
+    .join-intro {
+      margin-left: -2.25em; /* body-padding */
+      margin-right: -2.25em;
+    }
+    .join-intro h1 {
+      font-size: 2.25em;
+    }
+    .join-intro form {
+      margin-left: -3em;
+      margin-right: -3em;
+      margin-bottom: -1.5em;
+    }
+  }
+  @media (min-width: 40em) {
+    .join-intro p.text {
+      margin-top: 0;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .join-intro p.text {
+      margin-right: 0.875em;
+    }
+  }
+  @media (min-width: 55em) {
+    .join-intro img {
+      float: left;
+      margin-right: 2.625em; /* @line-height x 3/2 */
+    }
+    .join-intro p.submit {
+      margin-top: 0;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+
+
+/* =Activity Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .activity-item:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .activity-item p {
+    margin-top    : 0.75em; /* @line-height / 2 */
+    margin-bottom : 0.75em;
+  }
+
+  /* Links */
+  .activity-item a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .activity-item a:hover,
+  .activity-item a:active,
+  .activity-item a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* Headlines */
+  .activity-item .do h3 {
+    min-height: 2.7em; /* line-height x 2 */
+  }
+  .activity-item .comment h3,
+  .activity-item .follow  h3 {
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .activity-item .follow h3 {
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .activity-item h3 a {
+    color: inherit;
+  }
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* Icons */
+  .meta .dos      abbr,
+  .meta .votes    abbr,
+  .meta .comments abbr {
+    font-size: 0.75em; /* 12px / @font-size */
+    border-bottom-width: 0;
+  }
+  .meta .dos      abbr:before,
+  .meta .votes    abbr:before,
+  .meta .comments abbr:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+  }
+  .meta .dos abbr:before {
+    content: "\e604"; /* @icon-do */
+    color: rgb(83, 231, 185); /* @kiwi */
+  }
+  .meta .votes abbr:before {
+    content: "\e602"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .meta .comments abbr:before {
+    content: "\e601"; /* @icon-comment */
+    color: rgb(255, 223, 145); /* @banana */
+  }
+
+  /* Time */
+  .activity-item .time {
+    color: rgb(204, 204, 204); /* @magnesium */
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .activity-item .time abbr {
+    border-bottom-width: 0;
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .activity-item .more {
+    padding-left: 0.625em; /* 10px / @font-size */
+    margin-top: 1.5em;
+  }
+  .activity-item .more a {
+    color: rgb(153, 153, 153); /* @aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+  .activity-item .more a:hover,
+  .activity-item .more a:active,
+  .activity-item .more a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Units
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Post
+  ----------------------------------------------- */
+  .activity-item .post {
+    position: relative;
+  }
+  .activity-item .post h3 .image {
+    float: left;
+    position: relative;
+    margin-right: 0.83333333333333em; /* @line-height(20px) / font-size(24px) */
+  }
+  .activity-item .post h3 .image img {
+    display: block;
+  }
+  .activity-item .post h3 small {
+    font-size: 0.5em; /* 12px / 24px */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    white-space: nowrap;
+
+    /* TRICKY: Limit the width of the element, since the domain name might be very long. */
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* OPTIONAL: Line up with the headline */
+  @media (min-width: 40em) { /* @medium-size */
+    .activity-item .post .has-image + .meta {
+      margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
+    }
+  }
+
+  /* TBD: Consider using an SVG image here instead */
+  .activity-item .post .play-button .image:before {
+    content: "";
+    position: absolute;
+    top  : 50%;
+    left : 50%;
+    width  : 1.5em;                        /* 36px / font-size(24px) */
+    height : 1.5em;
+    margin-left : -0.875em; /* circle.width / 2 */
+    margin-top  : -0.875em;
+    border: 0.125em solid white;   /* 3px / font-size(24px) */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+         -o-border-radius: 100%;
+            border-radius: 100%;
+  }
+  .activity-item .post .play-button .image:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.2083333333em;              /* 5px / font-size(24px) */
+    margin-top: -0.375em;                      /* 9px / font-size(24px) */
+    display: block;
+    border-left   : 0.625em solid white;       /* 15px / font-size(24px) */
+    border-right  : 0;
+    border-top    : 0.375em solid transparent; /* 9px / font-size(24px) */
+    border-bottom : 0.375em solid transparent;
+
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+  /* Links have a smaller image */
+  .activity-item .link .play-button .image:before,
+  .activity-item .link .play-button .image:after {
+    font-size: 0.75em;
+  }
+
+
+  .activity-item form {
+    font-size: 0.75em;
+  }
+  .activity-item form.do,
+  .activity-item form.doing,
+  .activity-item form.done {
+    float: right;
+  }
+
+
+/* =Link
+  ----------------------------------------------- */
+
+  /* The links images are smaller, so we want the meta data to appear after them */
+  .activity-item .link .has-image:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Link images should appear on the right, instead of the left */
+  .activity-item .link h3 .image {
+    float: right;
+    border-right-width: 0;
+    margin-left: 0.9375em; /* @image-margin */
+    margin-bottom: 0.875em;
+
+    /* OPTIONAL: Move the image up and to the right a little */
+    margin-top   : -0.20833333333333em; /* @line-height(20px) / font-size(24px) x 1/4 */
+    margin-right : -0.20833333333333em;
+  }
+
+  /* OPTIONAL: Reset the margin, since the image is on the right. */
+  .activity-item .link .has-image + .meta {
+    margin-left: 0;
+  }
+
+  .activity-item section.link,
+  .activity-item section.follow {
+    padding       : 1.25em;  /* @line-height(20px) */
+    border: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    background: rgb(249, 249, 249); /* @silver */
+    border-radius: 0.25em;
+    transition: background-color 0.2s, border-color 0.2s;
+    position: relative;
+  }
+
+  .activity-item section.link:after,
+  .activity-item section.follow:after {
+    /* @clear-fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* OPTIONAL: Position the buttons in the bottom right corner on small screens */
+  @media (max-width: 29.9em) {
+    .activity-item .tags {
+      margin-left: 0.875em;
+    }
+  }
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  @media (min-width: 30em) {
+
+    /* Make space for the buttons */
+    .activity-item .do h3 {
+      margin-right: 4em;
+    }
+    .activity-item .follow h3,
+    .activity-item .follow h3           + .introduction,
+    .activity-item .follow h3.has-image + .introduction {
+      margin-right: 6.25em;
+    }
+
+    .scripted-do .activity-item .do     form,
+                 .activity-item .follow form {
+      position: absolute;
+      margin-top: 0;
+      top: 0;
+      right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
+    }
+    .activity-item .follow form {
+      top   : 1.25em; /* @line-height(20px) */
+      right : 1.25em; /* @line-height(20px) */
+    }
+  }
+
+  /* OPTIONAL: Light up the links and follows, when hovering over an item */
+  .activity-item .link,
+  .activity-item .follow {
+    background: white !important;
+    border-color: rgb(153, 153, 153) !important; /* @aluminum */
+  }
+
+
+/* =Follow (topic or person)
+  ----------------------------------------------- */
+  .activity-item .follow h3 .image {
+    float: left;
+    margin-right: 0.9375em; /* @image-margin */
+
+    /* OPTIONAL: Move the image up and to the left a little */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
+    margin-left : -0.3125em;
+  }
+  .activity-item .follow h3 .image img {
+    display: block;
+  }
+  .activity-item .follow,
+  .activity-item .follow + .more {
+    margin-top: 1.75em; /* @line-height */
+  }
+  .activity-item .follow .meta {
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .activity-item .follow .meta + .introduction {
+    border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
+  }
+  .activity-item .follow .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    margin-bottom: 0;
+  }
+
+  .activity-item .follow .has-image ~ .introduction {
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 4.375em; /* image.width(70px) / @font-size(16px) */
+
+    /* OPTIONAL: Line up with the follow button */
+    margin-right: -0.3125em;
+  }
+
+
+/* =Comment
+  ----------------------------------------------- */
+  .activity-item .comment {
+    padding-left: 2.5em; /* @line-height(20px) x 2 */
+  }
+  .activity-item .comment,
+  .activity-item .comment + .more {
+    margin-top: 1.25em; /* @line-height(20px) */
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.25em; /* @line-height(20px) */
+  }
+  .activity-item .comment + .comment {
+    padding-left: 5em; /* @line-height(20px) x 4 */
+  }
+
+  .activity-item .comment h3 a {
+    margin-right: 0.375em;
+  }
+  .activity-item .comment h3 img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+
+    margin-left: -3.33333333333333em; /* (@line-height(20px) x 2) / 12px */
+  }
+  .activity-item .comment p {
+    color: black;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+  .activity-item .comment p a {
+    color: rgb(102, 153, 204);
+  }
+  .activity-item .comment p a:hover,
+  .activity-item .comment p a:active,
+  .activity-item .comment p a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* OPTIONAL: Reduce the space between the headline and the commment */
+  .activity-item .comment h3.has-image + p {
+    margin-top: 0;
+  }
+
+
+/* =Source
+  ----------------------------------------------- */
+  .activity-item .source {
+    font-size: 0.75em; /* 12px / @font-size */
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+  .activity-item .source a {
+    font-weight: bold;
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .activity-item .source a:hover,
+  .activity-item .source a:hover,
+  .activity-item .source a:hover {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Meta
+  ----------------------------------------------- */
+  .activity-item .post .meta {
+    margin-top: 0.625em;
+    border-top: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    padding-top: 0.625em;
+  }
+
+  .activity-item .link .meta {
+    border-top-color: rgb(218, 220, 224); /* @bright-blue-silver */
+
+    /* OPTIONAL: Line up with the image */
+    margin-right: -0.3125em;
+  }
+
+  .topic-featured .activity-item.do .meta {
+    display: inline;
+    float: right;
+    margin-top: 0.65em;
+  }
+  .activity-item .post .meta:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .activity-item .meta p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 0.15em;
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+
+  /* OPTIONAL: Add a line between meta items within a follow */
+  .activity-item .follow .meta p {
+    margin-right: 0;
+  }
+  .activity-item .follow .meta p + p {
+    border-left: 1px solid rgb(216, 216, 216);
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    line-height: 1;
+  }
+
+  .activity-item .meta a {
+    color: inherit;
+  }
+
+  .activity-item .meta form.vote,
+  .activity-item .meta form.voted {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+  }
+
+  /* KLUDGE: This should share styles with comments and dos */
+  .activity-item .meta form.vote,
+  .activity-item .meta form.voted {
+    display: inline-block;
+    margin: 0 0 0.375em 0;
+    vertical-align: top;
+  }
+  .activity-item .meta form.vote  p,
+  .activity-item .meta form.voted p {
+    margin-right: 0;
+  }
+
+  .meta .vote  button,
+  .meta .voted button {
+
+    /*
+    color: inherit;
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+    */
+    border-radius: 0.25em;
+    font-family: inherit;
+    font-size: 0.75em;
+    line-height: 1.2em;
+    padding: 0.75em 0.75em 0.7em;
+    display: inline-block;
+    margin-left: 0;
+
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+    color: rgb(153, 153, 153);
+  }
+  .meta .vote  button:before,
+  .meta .voted button:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.1em;
+    margin-left: 0;
+    position: static;
+
+    content: "\e602"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .meta form.vote  button:hover,
+  .meta form.vote  button:active,
+  .meta form.vote  button:focus,
+  .meta form.voted button {
+    background-color: rgb(49, 144, 242);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+  }
+  .meta form.vote  button:hover:before,
+  .meta form.vote  button:active:before,
+  .meta form.vote  button:focus:before,
+  .meta form.voted button:before {
+    color: white;
+  }
+
+  .meta .vote.loading button {
+    color: transparent;
+  }
+  .meta .vote.loading button:hover,
+  .meta .vote.loading button:focus,
+  .meta .vote.loading button:active {
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+  }
+  .meta .vote.loading button:before {
+    color: transparent;
+  }
+
+
+
+  .activity-item .meta .dos,
+  .activity-item .meta .votes,
+  .activity-item .meta .comments {
+    display: inline-block;
+    margin-bottom: 0.375em;
+  }
+  .activity-item .meta .dos      a,
+  .activity-item .meta .votes    a,
+  .activity-item .meta .comments a {
+    color: inherit;
+    border: 0.1em solid rgb(244, 244, 244);
+    border-radius: 0.25em;
+    background: rgb(253, 253, 253);
+    padding: 0.1em 0.75em 0.225em;
+    display: inline-block;
+  }
+  .activity-item .meta a:hover,
+  .activity-item .meta a:active,
+  .activity-item .meta a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Tags
+  ----------------------------------------------- */
+  .activity-item .tags {
+    margin-top: 0.4375em; /* @line-height / 4 */
+  }
+  @media (min-width: 30em) {
+    .activity-item section.tags {
+      margin: 0 0 0 0.875em; /* @line-height / 2 */
+      margin-top: 0.2em; /* KLUDGE: Attempt to line up with the meta data */
+      display: inline;
+      float: right;
+    }
+  }
+  .activity-item section.tags h4 {
+    margin: 0;
+    display: inline;
+    font-size: inherit;
+  }
+  .activity-item section.tags h4 span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  .activity-item section.tags h4:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e603"; /* @icon-tag */
+
+    color: rgb(247, 105, 100); /* @strawberry */
+    font-size: 0.9375em; /* 15px / @font-size */
+  }
+
+  .activity-item section.tags ul,
+  .activity-item section.tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .activity-item section.tags ul {
+    margin-left: 0.75em;
+    font-size: 0.75em; /* 12px / @font-size */
+    display: inline;
+  }
+  .activity-item section.tags li {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 1em;
+  }
+  .activity-item section.tags li:last-child {
+    margin-right: 0;
+  }
+  .activity-item section.tags a {
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+  .activity-item section.tags a:hover,
+  .activity-item section.tags a:active,
+  .activity-item section.tags a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Activity Item
+  ----------------------------------------------- */
+  .activity-item {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
+  }
+  @media (max-width: 24.9em) {
+    .activity-item {
+      margin-left  : -1.5em; /* @line-height(20px) */
+      margin-right : -1.5em;
+    }
+  }
+
+  /* Show a triangle in the corner of the item, when hovering over it */
+  .activity-item:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e600"; /* @icon-corner */
+    color: rgb(34, 155, 246);
+    font-size: 0.9375em; /* 15px / @font-size */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .activity-item:hover:before {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Only show the topics for one item at a time */
+  /*
+  main:hover .activity-item .tags {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  main:hover .activity-item:hover .tags {
+    opacity: 1;
+  }
+  */
+
+  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
+
+
+
+  /* Over */
+  main:hover .activity-item:hover .meta .dos,
+  main:hover .activity-item:hover .meta .votes,
+  main:hover .activity-item:hover .meta .comments {
+    color: rgb(153, 153, 153);
+  }
+  main:hover .activity-item:hover .meta .dos abbr:before {
+    color: rgb(83, 231, 185); /* @kiwi */
+  }
+  main:hover .activity-item:hover .meta .votes abbr:before {
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  main:hover .activity-item:hover .meta .comments abbr:before {
+    color: rgb(255, 223, 145); /* @banana */
+  }
+  main:hover .activity-item:hover section.tags h4:before {
+    color: rgb(247, 105, 100); /* @strawberry */
+  }
+
+  /* OPTIONAL: Move the primary source up a little */
+  .activity-item > .source:first-child {
+    margin-top: -2.33333333333333em; /* 28px / 12px */
+  }
+  .activity-item > .source.has-image:first-child {
+    margin-bottom: -2em; /* This is arbitrary */
+  }
+
+  /* OPTIONAL: Move the primary source to the left a little */
+  @media (min-width: 25em) { /* @tiny-screen */
+    .activity-item > .source:first-child {
+      margin-left: -1.66666666666667em; /* @line-height(20px) / 12px */
+    }
+    .activity-item > .source.has-image:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .activity-item > .source:first-child img {
+    vertical-align: top;
+    margin-top: -1em; /* 12px / 12px */
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 1.25em;
+    border-color: rgb(221, 223, 227); /* @silver-blue */
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    width: 30px;
+  }
+
+  /* OPTIONAL: Make the member images about half their usual size on small screens */
+  @media (max-width: 29.9em) {
+    .activity-item > .source:first-child img {
+      width  : 2.5em; /* 30px / font-size(12px) */
+      height : auto;
+    }
+  }
+
+  /* OPTIONAL: Position the time in the top right corner */
+  .activity-item .time:first-child,
+  .activity-item > .source:first-child + .time {
+    margin: 0;
+    position: absolute;
+    top: 1em; /* 12px / 12px */
+    right: 1.66666666666667em; /* 20px / 12px */
+  }
+
+  .activity-item > .time + .post,
+  .activity-item > .time + .follow {
+    margin-top: 2.5em;
+  }
+
+  @media (min-width: 40em) { /* @medium-size */
+
+
+
+
+    .activity-item > .time:first-child + .post,
+    .activity-item > .time:first-child + .follow {
+      margin-top: 0;
+    }
+
+    /* OPTIONAL: Don’t line up with the source if this is a feature */
+    .topic-featured .activity-item > .time + .post {
+      margin-top: 2.5em; /* @line-height(20px) / 2 */
+      margin-left: -1.25em; /* @line-height(20px) */
+      margin-right: 0;
+    }
+
+  }
+
+
+/* =Featured Article
+  ----------------------------------------------- */
+
+  .topic-featured {
+    margin-bottom: 0;
+  }
+  .topic-featured .activity-item {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  /* OPTIONAL: Make the featured source image smaller */
+  .topic-featured .activity-item > .source:first-child img {
+    width: 2.5em; /* 30px / @font-size(16px) */
+    height: auto;
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 0.625em;
+  }
+
+  /* OPTIONAL: Line up with the headline */
+  @media (min-width: 40em) { /* @medium-size */
+    .topic-featured .activity-item .post .has-image + .meta {
+      margin-left: 8.75em; /* image.width(120px) / @font-size(16px) */
+    }
+  }
+
+  @media (max-width: 54.9em) {
+    .topic-featured .activity-item h3 .image img {
+      width: 5em; /* target-image-size(120px) / font-size(24px) */
+      height: auto;
+    }
+  }
+  @media (min-width: 55em) {
+    /* OPTIONAL: Make the headline bigger */
+    .topic-featured .activity-item h3 {
+      font-size: 2.25em; /* 36px / 16px */
+    }
+
+    .topic-featured .activity-item .post h3 small {
+      font-size: 0.33333333333333em; /* 12px / 36px */
+    }
+
+    /* Featured posts have a larger image */
+    .topic-featured .activity-item .post .has-image + .meta {
+      margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
+    }
+  }
+
+
+  /* OPTIONAL: Don’t use the usual “link” style */
+  .topic-featured .activity-item .link {
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+  }
+  .topic-featured .activity-item .link .has-image:after {
+    display: none;
+    clear: none;
+  }
+  .topic-featured .activity-item .link h3 .image {
+    float: left;
+    margin: 0;
+    margin-right: 0.83333333333333em; /* @line-height / @font-size(16px) */
+  }
+
+
+/* =Ad
+  ----------------------------------------------- */
+  .activity-list .ad {
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  aside p.ad img {
+    display: block;
+  }
+  aside div.ad,
+  aside .promotion,
+  aside .fb-recommendations {
+    margin-top : 1.3125em; /* @line-height x 3/4 */
+    margin-bottom : 1.3125em; /* @line-height x 3/4 */
+  }
+  aside div.ad:first-child,
+  aside .promotion:first-child,
+  aside .fb-recommendations:first-child {
+    margin-top: 0;
+  }
+
+  /* TEMPORARY: These only appear in the prototype */
+  aside p.ad,
+  aside section.facebook {
+    margin-top : 1.3125em; /* @line-height x 3/4 */
+    margin-bottom : 1.3125em; /* @line-height x 3/4 */
+  }
+  aside p.ad:first-child,
+  aside section.facebook:first-child {
+    margin-top: 0;
+  }
+
+
+/* =Featured Do
+  ----------------------------------------------- */
+
+  .activity > header h1,
+  .activity > header h2,
+  .topic-featured h2,
+  .topic-featured > .container > section > h3,
+  .topic > header + section > header > h2 { /* followers */
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .activity > header h1,
+  .activity > header h2,
+  .topic-featured h2,
+  .topic > header + section > header > h2 { /* followers */
+    font-size: 1.875em; /* 30px / @font-size(16px) */
+  }
+
+  .topic .featured > .featured-do {
+    margin-bottom: 1.75em;
+  }
+
+  @media (min-width: 50em) { /* @topic-featured-width */
+
+    /* @column-container */
+    .topic-featured:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* @primary-column */
+    .topic-featured > .container > section {
+      margin-top: 0;
+      float: left;
+      width: 58%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+
+    /* @aside-column */
+    .topic-featured > .container > .activity-item ~ .featured-do {
+      margin-top: 0;
+      float: right;
+      width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+  @media (min-width: 55em) {
+    .topic-featured > .container > section {
+      width: 62%;
+    }
+  }
+
+  @media (min-width: 60em) {
+    .topic-featured > .container > section {
+      width: 65%;
+    }
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+
+    /* @primary-column */
+    .topic-featured > .container > section {
+      width: 69.25%;
+    }
+  }
+
+  .topic-featured > .container > .featured-do {
+    margin-top: 1.75em; /* @line-height */
+    border-top: 0.1em solid rgb(218, 220, 224);
+    padding-top: 1.75em; /* @line-height */
+  }
+
+  /* OPTIONAL: Make the featured items fit nicely on small screens */
+  @media (max-width: 24.9em) {
+    .topic-featured > .container > .featured-do {
+      margin-left  : -1.5em;
+      margin-right : -1.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+
+  @media (min-width: 50em) { /* @topic-featured-width */
+    .topic-featured > .container > .featured-do {
+      border-top-width: 0;
+      padding-top: 0;
+    }
+
+    /* OPTIONAL: Line the features up horizontally */
+    .topic-featured > .container > .activity-item ~ .featured-do {
+      margin-top: -2.75em;
+    }
+  }
+
+  .topic-featured .activity-item.do {
+    margin-top: 0;
+    background: rgb(246, 255, 250);
+    border: 0.375em solid rgb(233, 249, 240);
+    padding: 1.3125em; /* @line-height x 3/4*/
+  }
+  .topic-featured .activity-item.do .meta .comments {
+    margin-left: 0.75em;
+  }
+  .topic-featured .activity-item.do .meta .dos      a,
+  .topic-featured .activity-item.do .meta .comments a {
+    background-color: transparent;
+    padding: 0;
+    border-width: 0;
+  }
+
+  /* KLUDGE: Remove the space above the section in featured do’s
+  (It would be better to remove the section element altogether.) */
+  .topic-featured .activity-item.do section {
+    margin-top: 0;
+  }
+
+  .topic-featured .activity-item.do h3 {
+    font-size: 1.25em;
+    text-align: center;
+  }
+
+  .topic-featured .activity-item.do h3 a {
+    display: block;
+  }
+  .topic-featured .activity-item.do h3 img {
+    border: 0.25em solid rgb(203, 238, 218);
+    border-radius: 100%;
+    margin: 0 auto 1.25em; /* @line-height */
+    display: block;
+  }
+  .topic-featured .activity-item.do form {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+/* =Activity List
+  ----------------------------------------------- */
+  ul.activity-list {
+    margin-top: 1.25em; /* @line-height */
+  }
+  ul.activity-list,
+  ul.activity-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  /*
+  ul.activity-list > li {
+    max-width: 48em;
+  }
+  */
+
+
+/* =Follow Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Follow List
+  ----------------------------------------------- */
+  .follow-list {
+    margin-top: 1.25em; /* @line-height */
+  }
+  .follow-list,
+  .follow-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .follow-list > li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .follow-list > li {
+    position: relative;
+  }
+
+  .follow-list form {
+    font-size: 0.75em;
+  }
+
+  /* Links */
+  .follow-list a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .follow-list a:hover,
+  .follow-list a:active,
+  .follow-list a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* Headlines */
+  .follow-list h3 {
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .follow-list h3 a {
+    color: inherit;
+  }
+  .follow-list h3 a:hover,
+  .follow-list h3 a:hover,
+  .follow-list h3 a:hover {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+
+
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  @media (min-width: 40em) { /* @medium-size */
+
+    /* Make space for the buttons */
+    .follow-list h3,
+    .follow-list h3           + .introduction,
+    .follow-list h3.has-image + .introduction {
+      margin-right: 6.25em;
+    }
+
+    .follow-list form {
+      position: absolute;
+      margin-top: 0;
+      top: 1.5em;
+      right: 1.5em;
+      text-align: right;
+    }
+  }
+
+  /* Meta */
+  .follow-list .meta p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 0.75em;
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+
+  /* OPTIONAL: Add a line between meta items within a follow */
+  .follow-list .meta p {
+    margin-right: 0;
+  }
+  .follow-list .meta p + p {
+    border-left: 1px solid rgb(216, 216, 216);
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    line-height: 1;
+  }
+
+
+/* =Follow (topic or person)
+  ----------------------------------------------- */
+  .follow-list h3 img {
+    display: block;
+    float: left;
+    margin-right: 0.9375em; /* @image-margin */
+
+    /* OPTIONAL: Move the image up and to the left a little */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
+    margin-left : -0.3125em;
+  }
+
+  .follow-list .meta {
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .follow-list .meta + .location,
+  .follow-list .meta + .introduction {
+    border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
+  }
+  .follow-list .location,
+  .follow-list .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    margin-bottom: 0;
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 5.625em; /* image.width(90px) / @font-size(16px) */
+
+    /* OPTIONAL: Line up with the follow button */
+    margin-right: -0.3125em;
+  }
+
+
+/* =Follow Item
+  ----------------------------------------------- */
+  .follow-list > li {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding: 1.5em; /* @line-height */
+  }
+
+  @media (max-width: 24.9em) { /* @tiny-screen */
+    .follow-list > li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+
+  #content aside + .has-aside,
+  #content aside + .has-aside + aside {
+    /* @separator */
+    /*
+    margin-top: 2.95em;
+    */
+  }
+  #content > .container > section + section,
+  #content > .container > aside   + section {
+
+    /* @separator */
+    /*
+    margin-top: 2.95em;
+    padding-top: 2.95em;
+    */
+  }
+
+
+
+/* =Comment Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Comment List
+  ----------------------------------------------- */
+  .comment-list {
+    margin-top: 1.25em; /* @line-height */
+  }
+  .comment-list,
+  .comment-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .comment-list > li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .comment-list p {
+    margin-top    : 0.625em; /* @line-height(20px) / 2 */
+    margin-bottom : 0.625em;
+  }
+
+  /* Links */
+  .comment-list a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .comment-list a:hover,
+  .comment-list a:active,
+  .comment-list a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* Headlines */
+  .comment-list h3 {
+    margin: 0;
+    font-size: 0.75em;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .comment-list h3 a {
+    font-weight: bold;
+    color: rgb(101, 102, 102); /* @steel */
+  }
+
+  .comments .submit {
+    margin-top: 1em;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .comment-list + .more {
+    padding-left: 0.625em; /* 10px / @font-size */
+    margin-top: 1.5em;
+  }
+  .comment-list + .more a {
+    color: rgb(153, 153, 153); /* @aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+    text-decoration: none;
+  }
+  .comment-list + .more a:hover,
+  .comment-list + .more a:active,
+  .comment-list + .more a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+
+
+/* =Units
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+/* =Comment
+  ----------------------------------------------- */
+  .comment-list article {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding-top: 1.25em;
+    margin-bottom: 0;
+  }
+  .comment-list article,
+  .comment-list + .more {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.25em; /* @line-height(20px) */
+    padding-bottom: 1.25em
+  }
+  .comment-list ul {
+    margin-top: 0;
+  }
+
+  .comment-list article > h3 img {
+    float: left;
+    margin-right: 0.5em;
+  }
+  .comment-list article > h3 a {
+    margin-right: 0.375em;
+  }
+  .comment-list article > p {
+    color: black;
+    font-size: 0.875em; /* 14px / @font-size */
+
+    /* OPTIONAL: Handle the case where a URL within a comment is really long and won’t wrap naturally.*/
+    /* For an example, see Kevin Van Lierop’s commment in this article: http://www.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
+  }
+  .comment-list article > p a {
+    color: rgb(102, 153, 204);
+  }
+  .comment-list article > p a:hover,
+  .comment-list article > p a:active,
+  .comment-list article > p a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  .supports-placeholder .comments label > span:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .supports-placeholder .comments label br {
+    display: none;
+  }
+
+  @media (min-width: 40em) {
+    .comment-list article {
+      border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      position: relative;
+      padding: 1.25em; /* @line-height(20px) */
+    }
+
+    .comment-list li article {
+      padding-left: 5.625em; /* 90px / 16px */
+    }
+    .comment-list li li article {
+      padding-left: 10em; /* 160px / 16px */
+    }
+    .comment-list li li li article {
+      padding-left: 14.375em; /* 230px / 16px */
+    }
+    .comment-list li li li li article {
+      padding-left: 18.75em; /* 300px / 16px */
+    }
+
+    .comment-list li article {
+      padding-left: 5.625em; /* 90px / 16px */
+    }
+    .comment-list li li article {
+      padding-left: 7.5em; /* 120px / 16px */
+    }
+    .comment-list li li li article {
+      padding-left: 9.375em; /* 150px / 16px */
+    }
+    .comment-list li li li li article {
+      padding-left: 11.25em; /* 180px / 16px */
+    }
+
+    .comment-list article > h3 img {
+      float: none;
+      vertical-align: -3.25em;
+      margin-left: -5.83333333333333em; /* 70px / 12px */
+    }
+
+    /* OPTIONAL: Reduce the space between the headline and the commment */
+    .comment-list article > h3 + p {
+      margin-top: -1.75em;
+    }
+
+    .comment-list form {
+      margin-top: 1.5em;
+    }
+    .comment-list form h4 {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+
+
+/* =Member Header
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .member-header {
+    margin-top    : 0;
+    margin-bottom : 0;
+  }
+  .member-header > .container {
+    position: relative;
+  }
+
+  #content .member-header nav.sub {
+    margin-top: 1.75em;
+    padding-bottom: 0;
+    border-bottom-width: 0;
+    margin-bottom: 0;
+    border-top: 0.1em solid rgb(215, 216, 217);
+    padding-top: 0.875em;
+  }
+
+  .member-header h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    line-height: 1.3125em; /* @line-height / 4 x 3 */
+    margin-top: 0em;
+    margin-bottom: 1.3125em;
+  }
+  .member-header h1 a {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .member-header h1 a[href]:hover,
+  .member-header h1 a[href]:active,
+  .member-header h1 a[href]:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .member-header .basics button {
+    font-size: 0.75em;
+  }
+  .member-header .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+
+    border-bottom: 0.04166666667em solid rgb(218, 220, 224); /* 1px / 24px */
+    padding-bottom: 0.5833333334em;
+    margin-bottom : 0.5833333334em;
+  }
+  .member-header .skills {
+    font-style: italic;
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2;            /* @line-height / 0.875 */
+    margin-top: 1em;
+  }
+  .member-header .details dt,
+  .member-header .details dd {
+    display: inline;
+  }
+  .member-header .details dt:after {
+    content: ":";
+  }
+
+  .member-header .details dt.location,
+  .member-header .details dt.twitter,
+  .member-header .details dt.website {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .profile-form p.location label:before,
+  .profile-form p.twitter  label:before,
+  .profile-form p.website  label:before,
+  .member-header .details dt.location + dd:before,
+  .member-header .details dt.twitter  + dd a:before,
+  .member-header .details dt.website  + dd a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .profile-form p.location label:before,
+  .profile-form p.twitter  label:before,
+  .profile-form p.website  label:before {
+    margin-right: 0.25em;
+  }
+  .member-header .details dt.location + dd:before,
+  .member-header .details dt.twitter  + dd a:before,
+  .member-header .details dt.website  + dd a:before {
+    font-size: 1.25em;
+    margin-right: 0.25em;
+  }
+  .profile-form p.location label:before,
+  .member-header .details dt.location + dd:before {
+    content: "\e618"; /* @icon-location */
+  }
+  .profile-form p.twitter  label:before,
+  .member-header .details dt.twitter  + dd a:before {
+    content: "\e60f"; /* @icon-twitter */
+  }
+  .profile-form p.website  label:before,
+  .member-header .details dt.website  + dd a:before {
+    content: "\e614"; /* @icon-active */
+  }
+
+  .member-header .details dd {
+    margin-right: 1.5em;
+  }
+  .member-header .details dd {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+  .member-header .details dd,
+  .member-header .details dd a {
+    color: rgb(101, 102, 102); /* @steel */
+    text-decoration: none;
+  }
+  .member-header .details dd a:hover,
+  .member-header .details dd a:active,
+  .member-header .details dd a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  .member-header > .container > div {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.75em 1.5em 2.625em;
+    background: rgb(253, 254, 255); /* @snow */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
+  .member-header .basics:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .member-header h1 img {
+    float: left;
+    margin-right: 1.3125em;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 40em) {
+    .member-header .basics {
+      text-align: center;
+    }
+    .member-header > .container > div:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .member-header .introduction {
+      margin-top: 0;
+      min-height: 4.6666666668em; /* .introduction.line-height x 2 */
+      padding-bottom: 0.75em; /* 18px / 24px*/
+      margin-bottom: 0.4166666667em; /* 10px / 24px*/
+    }
+    .member-header dl {
+      margin-top: 1.3125em; /* @line-height / 2 x 3 */
+    }
+    .member-header .skills {
+      margin-top: 0;
+    }
+    .member-header .basics {
+      float: left;
+      width: 8.125em;
+    }
+    .member-header h1 img {
+      display: block;
+      float: none;
+      margin-bottom: 0.875em; /* @line-height / 2 */
+
+      /* OPTIONAL: Adjust to the vertical rythm by compensating for the image’s height of 130px (the image would ideally be 140px) */
+      margin-bottom: 0.625em; /* 0.875 + (10px / @font-size) */
+    }
+    .member-header .details {
+      margin-left: 10.5em;
+    }
+  }
+
+  @media (min-width: 40em) {
+    .member-header > .container > div {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+    .member-header .introduction {
+      /* article headline size */
+      font-size: 2.375em; /* 38px / @font-size(16px) */
+
+      /* article line height */
+      line-height: 1.13em;
+
+      border-bottom: 0.02777777778em solid rgb(218, 220, 224); /* 1px / 36px */
+      min-height: 2.825em; /* .introduction.line-height x 2.5 */
+      padding-bottom: 0.565em; /* .introduction.line-height / 2*/
+      margin-bottom: 0.21em; /* 10px / 36px*/
+    }
+  }
+
+  @media (min-width: 50em) {
+    .member-header > .container > div {
+      border-width: 0.1em;
+      padding: 2.625em;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+
+/* =Sub Header
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  body > header.sub {
+    margin-top: 0;
+  }
+  body > header.sub > .container > div {
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.5625em; /* @line-height - 0.1875em */
+    background: white;
+    text-align: center;
+  }
+  body > header.sub > .container > div h1 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    color: rgb(0, 1, 2); /* @midnight */
+    margin-bottom: 0;
+    font-size: 2.25em;
+    line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
+  }
+
+  /* KLUDGE: Add space between the header and navigation
+  (It might make more sense to give the nav some margin by default.) */
+  body > header.sub + nav.sub {
+    margin-top: 1.75em;
+  }
+
+  @media (min-width: 40em) {
+    body > header.sub > .container > div {
+      padding: 3.3125em; /* @line-height x 2 - 0.1875em */
+    }
+    body > header.sub > .container > div h1 {
+      font-size: 3em; /* 60px / @font-size */
+      line-height: 0.9333333333;
+    }
+  }
+
+
+/* =Topic Header
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .topic-header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .topic-header > .container > div {
+    border-width: 0.1875em;
+    border-style: solid;
+    border-color: rgb(51, 52, 53); /* 3px / @font-size */
+    padding: 1.5625em; /* @line-height - 0.1875em */
+    background: white;
+    text-align: center;
+  }
+
+  .topic-header > .container > div h1 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    color: rgb(0, 1, 2); /* @midnight */
+    margin-bottom: 0;
+    font-size: 2.25em;
+    line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
+  }
+  @media (min-width: 40em) {
+    .topic-header > .container > div {
+      padding: 3.3125em; /* @line-height x 2 - 0.1875em */
+    }
+    .topic-header > .container > div h1 {
+      font-size: 3.75em; /* 60px / @font-size */
+      line-height: 0.9333333333;
+    }
+  }
+  .topic-header h1 a {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .topic-header h1.has-image {
+    position: relative;
+  }
+  .topic-header h1.has-image a {
+    border-width: 0;
+    padding: 0;
+  }
+  .topic-header h1.has-image img {
+    max-width: 716px; /* image.width(1075px) x 2/3 */
+    display: block;
+  }
+  @media (min-width: 49.25em) { /* 716px / @font-size(16px) */
+    .topic-header h1.has-image img {
+      max-width: 100%;
+    }
+  }
+  .topic-header h1 a[href]:hover,
+  .topic-header h1 a[href]:active,
+  .topic-header h1 a[href]:focus {
+    border-color:rgb(47, 132, 218); /* @ocean */
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* KLUDGE: Support the old image maps on pages like this one: http://www.good.is/los-angeles */
+  .topic-header a.image-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .topic-header > .container > div p {
+    margin-top: 0;
+    color: rgb(238, 130, 105); /* @salmon */
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2;            /* @line-height / 0.875 */
+  }
+
+  /* OPTIONAL: Make featured topics look fancy */
+  .disabled .topic-header > .container > .featured {
+    border-color: rgb(113, 179, 247); /* @sky */
+    border-color: rgb(240, 106, 101); /* @pink */
+    border-color: rgb(248, 131, 63); /* @orange */
+    border-color: rgb(14, 83, 125); /* @blue */
+  }
+  .topic-header > .container > .featured h1 {
+    margin-top: 0;
+  }
+  .disabled .topic-header > .container > .featured a {
+    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(240, 106, 101); /* @pink */
+    color: rgb(248, 131, 63); /* @orange */
+    color: rgb(14, 83, 125); /* @blue */
+  }
+  .topic-header > .container > .featured p {
+    color: rgb(70, 70, 70); /* @iron */
+    text-align: left;
+  }
+  @media (min-width: 30em) {
+    .topic-header > .container > .featured {
+      text-align: left;
+    }
+    .topic-header > .container > .featured img {
+      margin-top: -0.875em;
+      float: right;
+    }
+  }
+
+
+/* =Post
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .post > article .share {
+    border-width: 0.1em 0;
+    padding: 0.875em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @article-border-color */
+  }
+  .post > article .share,
+  .post > article .share li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post > article .share li {
+    display: inline;
+  }
+  /*
+  .post > header form h2 button {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+  */
+
+
+
+  .post > article .share a {
+    display: inline-block;
+    background-color: rgb(255, 249, 208);
+    color: rgb(218, 198, 71);
+    text-decoration: none;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+    font-weight: bold;
+
+    /* TODO: Consider changing this to an em value, and adjusting it
+    if the font size is changed (just like margins and line heights). */
+    border-radius: 2px;
+
+    line-height: 1.6875em;
+    padding: 0.5625em 1.25em;
+  }
+  .post > article .share a:hover,
+  .post > article .share a:active,
+  .post > article .share a:focus {
+    color: rgb(178, 158, 31);
+  }
+
+  .post > article .facebook  a:after,
+  .post > article .twitter   a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.25em;
+    margin-left: 0.5em;
+  }
+  .post > article .facebook  a:after {
+    content: "\e60d"; /* @icon-facebook */
+  }
+  .post > article .twitter   a:after {
+    content: "\e60f"; /* @icon-twitter */
+  }
+
+  .post > header {
+    margin-bottom: 0;
+  }
+  .post > header .do   abbr,
+  .post > header .vote abbr {
+    font-size: 2.375em; /* 38px / @font-size(16px) */
+    line-height: normal;
+    font-weight: bold;
+  }
+
+  .post > header .do   abbr:before,
+  .post > header .vote abbr:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 0.55em; /* image-size(21px) / font-size(38px) */
+
+    line-height: 2em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.25em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .post > header .do abbr:before {
+    content: "\e604"; /* @icon-do */
+    color: rgb(83, 231, 185); /* @kiwi */
+  }
+  .post > header .vote abbr:before {
+    content: "\e602"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @sky */
+  }
+
+  .post > header .doing,
+  .post > header .done,
+  .post > header .dos,
+  .post > header .vote,
+  .post > header .voted,
+  .post > header .votes {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post > header .link,
+  .post > header .do,
+  .post > header .doing,
+  .post > header .done,
+  .post > header .dos,
+  .post > header .vote,
+  .post > header .voted,
+  .post > header .votes {
+    display: inline-block;
+    float: none;
+  }
+  .post > header h2.do,
+  .post > header h2.link {
+    margin-right: 0.55em;
+    border-right: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
+    padding-right: 1em;
+    line-height: 1;
+  }
+  .post > header .dos,
+  .post > header .votes {
+    margin-right: 0.875em;
+  }
+
+  /* OPTIONAL: Position the button on the right */
+  .post > header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .post > header .dos,
+  .post > header .votes {
+    margin-right: 0;
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  .post > header form.do,
+  .post > header form.doing,
+  .post > header form.done,
+  .post > header form.vote,
+  .post > header form.voted {
+    float: right;
+    margin-top: -0.15em;
+    margin-bottom: 1.75em; /* @line-height */
+  }
+
+  /* Support multiple form elements, wrapped in a container */
+  .post > header .todo_actions {
+    float: right;
+    margin-top: -0.15em;
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  .post > header .todo_actions form {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* OPTIONAL: Hide the information about others on small screens. */
+  @media (max-width: 29.9em) {
+    .post > header h2.do,
+    .post > header h2.link {
+      border-right-width: 0;
+    }
+    .post > header .dos,
+    .post > header .votes {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  /* OPTIONAL: Hide the list of voters or doers on small & medium size screens. */
+  @media (max-width: 44.9em) {
+    .post > header .dos   ul,
+    .post > header .votes ul {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  /* OPTIONAL: Make the buttons on the post page a little smaller. */
+  .post > header form.do    h6,
+  .post > footer form.do    h6,
+  .post > header form.do    p,
+  .post > footer form.do    p,
+  .post > header form.doing h6,
+  .post > footer form.doing h6,
+  .post > header form.doing p,
+  .post > footer form.doing p,
+  .post > header form.done  h6,
+  .post > footer form.done  h6,
+  .post > header form.done  p,
+  .post > footer form.done  p,
+  .post > header form.vote  p,
+  .post > footer form.vote  p,
+  .post > header form.voted p,
+  .post > footer form.voted p {
+    font-size: 0.75em;
+  }
+
+  .post > article {
+    margin-top: 0;
+    border-width: 0.1em 0;
+    padding: 1.75em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @article-border-color */
+    margin-bottom: 1.75em; /* @line-height */
+  }
+
+
+  .post > article header {
+    margin-bottom: 1.75em; /* @line-height */
+  }
+  .post > article h1 {
+    font-size: 2.375em; /* 38px / @font-size(16px) */
+  }
+  .post > article h1      a,
+  .post > article .source a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .post > article header .action {
+    font-size: 0.75em;
+    margin-top: 0;
+    margin-bottom: 2.3333333333em; /* @line-height / 0.75 */
+  }
+  .post > article header .edit a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+  }
+  .post > article .source {
+    color: rgb(153, 153, 153); /* @activity-source */
+    font-size: 0.75em;
+  }
+  .post > article .source img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  .post > article .source a {
+    /* @activity-source-link */
+    font-weight: bold;
+    color: rgb(101, 102, 102); /* @steel */
+  }
+
+  .post > article h1      a:hover,
+  .post > article h1      a:active,
+  .post > article h1      a:focus,
+  .post > article .source a:hover,
+  .post > article .source a:active,
+  .post > article .source a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  .post > article h1 img {
+    display: block;
+    margin-bottom: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
+  }
+
+  .post > article h1 img {
+    float: right;
+    margin-left: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
+  }
+  .post > article .share {
+    clear: both;
+  }
+  .post > article h1      a:hover,
+  .post > article h1      a:active,
+  .post > article h1      a:focus,
+  .post > article .source a:hover,
+  .post > article .source a:active,
+  .post > article .source a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .post > article p {
+    line-height: 1.875; /* 30px / @font-size(16px) */
+  }
+
+  /* TBD: Should we add a height attribute to the iframe instead? */
+  .post > article iframe {
+    height: 505px;
+  }
+  @media (max-width: 29.9em) {
+    .post > article iframe {
+      height: 250px;
+    }
+  }
+
+  /* OPTIONAL: Make the headline and image fit nicely on small screens */
+  @media (max-width: 39.9em) {
+    .post > article h1 {
+      font-size: 1.5em;
+    }
+    .post > article h1 img {
+      width: 5em;
+      height: auto;
+    }
+  }
+
+
+
+/* =Slideshow
+  ----------------------------------------------- */
+  .slideshow {
+    margin-bottom: 1.5em;
+  }
+  .slideshow a {
+    display: block;
+    border: 0.625em solid rgb(0, 1, 2); /* @midnight */
+    position: relative;
+    background: rgb(0, 1, 2); /* @midnight */
+  }
+  .slideshow a img {
+    transition: opacity 0.2s;
+  }
+  .slideshow a:hover  img,
+  .slideshow a:active img,
+  .slideshow a:focus  img {
+    opacity: 0.6;
+  }
+  .slideshow p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background:  rgb(0, 1, 2);       /* @midnight */
+    background: rgba(0, 1, 2, 0.75); /* @midnight */
+    padding: 0.5em 1em 0.5em 1.25em;
+    color: rgb(204, 204, 204);
+    border-radius: 1.5em;
+    margin-top: -1em;
+    margin-left: -7em;
+    font-weight: bold;
+  }
+  .slideshow p:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.65em;
+    vertical-align: middle;
+  }
+  .slideshow img {
+    margin: 0;
+  }
+
+  .post article figure ol,
+  .post article figure li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post article figure ol {
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+  }
+  .post article figure li {
+    margin-bottom: 0.875em;
+  }
+
+  .post > footer .tags {
+    margin-top: 0.875em; /* @line-height / 2 */
+    background: rgb(247, 247, 247);
+    padding: 1.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
+  @media (min-width: 40em) {
+    .post > footer .tags {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+  }
+
+  /* OPTIONAL: Add a border around the article on large screens */
+  @media (min-width: 50em) {
+    .post > header {
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @article-border-color */
+      border-width: 0.1em 0.1em 0;
+      padding: 1.75em 3.5em 0; /* @line-height x 2 */
+    }
+    .post > footer {
+      margin-top: 0;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @article-border-color */
+      border-width: 0 0.1em 0.1em;
+      padding: 0.875em 3.5em 1.75em; /* @line-height x 2 */
+    }
+    .post > footer .tags {
+      margin-left: -3.5em;
+      margin-right: -3.5em;
+      margin-bottom: -1.75em;
+      padding-left: 3.5em;
+      padding-right: 3.5em;
+      padding-bottom: 2.25em;
+    }
+    .post > article {
+      margin-bottom: 0;
+      border-width: 0 0.1em 0;
+      padding: 0 3.5em 0 3.5em; /* @line-height x 2 */
+    }
+    .post > article h1 {
+      border-top: 1px solid rgb(218, 220, 224); /* @article-border-color */
+      padding-top: 0.7368421053em; /* @line-height(1.75em) / font-size(2.375em) */
+    }
+    .post > article > form:last-child,
+    .post > article > footer:last-child {
+      border-bottom: 1px solid rgb(218, 220, 224); /* @article-border-color */
+      padding-bottom: 1.75em;
+    }
+  }
+
+  .post > footer .tags h2,
+  .post > footer .tags li {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+
+  .post .tags ul,
+  .post .tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .post > footer .tags h2 {
+    color: rgb(14, 14, 14);
+    font-family: inherit;
+  }
+  .post > footer .tags h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e603"; /* @icon-tag */
+
+    color: rgb(247, 105, 100); /* @strawberry */
+    font-size: 1.15384615384615em; /* 15px / 13px */
+    margin-right: 0.5em;
+  }
+
+  .post > footer .tags:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .post > footer .tags li {
+    float: left;
+    margin: 0 0.375em 0.375em 0;
+  }
+  .post > footer .tags a {
+    display: inline-block;
+    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
+    color: rgb(83, 83, 83);
+    background: rgb(252, 252, 252);
+    border: 1px solid rgb(240, 240, 240); /* @bright-mercury */
+    text-decoration: none;
+  }
+
+  .post > footer .tags a:hover,
+  .post > footer .tags a:active,
+  .post > footer .tags a:focus {
+    background: white;
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+
+  .post > .comments,
+  .post > .popular-posts {
+    margin-top: 1.75em;
+    padding-top: 1.75em;
+    border-top: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
+  }
+
+  form .submit a {
+    color: rgb(247, 157, 130);
+    font-weight: bold;
+    text-decoration: inherit;
+  }
+  form .submit a:hover,
+  form .submit a:active,
+  form .submit a:focus {
+    color: rgb(247, 113, 113);
+  }
+
+  .post > article .secondary h2,
+  .post > header h2,
+  .post > footer h2 {
+    font-family: inherit;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    line-height: 2em; /* @line-height(1.75em) / font-size(0.875em) */
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .post > header h2.do,
+  .post > header h2.link {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+    color: black;
+  }
+  .post > header .dos   ul,
+  .post > header .dos   li,
+  .post > header .votes ul,
+  .post > header .votes li,
+  .post > footer .dos   ul,
+  .post > footer .dos   li,
+  .post > footer .votes ul,
+  .post > footer .votes li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post > header .dos   li,
+  .post > header .votes li,
+  .post > footer .dos   li,
+  .post > footer .votes li {
+    display: inline;
+  }
+
+  .post > article .secondary {
+    margin-top: 1.75em; /* @line-height */
+  }
+  .post > article .secondary h2,
+  .post > article .secondary p,
+  .post > footer .do    h2,
+  .post > footer .vote  h2,
+  .post > footer .do    p,
+  .post > footer .vote  p,
+  .post > footer .do    form,
+  .post > footer .vote  form {
+    display: inline;
+  }
+  .post > article .secondary h2 {
+    margin-right: 0.875em;
+  }
+  .post > footer .dos   img,
+  .post > footer .votes img,
+  .post > header .dos   img,
+  .post > header .votes img {
+    vertical-align: middle;
+  }
+
+  @media (min-width: 30em) {
+    .post > footer .dos   h2,
+    .post > footer .votes h2,
+    .post > header .dos   h2,
+    .post > header .votes h2,
+    .post > footer .dos   ul,
+    .post > footer .votes ul,
+    .post > header .dos   ul,
+    .post > header .votes ul {
+      display: inline;
+    }
+    .post > footer .dos   h2,
+    .post > footer .votes h2,
+    .post > header .dos   h2,
+    .post > header .votes h2 {
+      margin-right: 0.875em;
+    }
+
+    /* TBD: Support a maximum width for voters on large screens (See _voter_facepile.html.slim) */
+    .post > header .dos   ul,
+    .post > header .votes ul {
+      margin-top: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .post > footer .do,
+  .post > footer .doing,
+  .post > footer .done,
+  .post > footer .dos,
+  .post > footer .vote,
+  .post > footer .voted,
+  .post > footer .votes {
+    margin-top: 0.875em; /* @line-height / 2 */
+    display: inline-block;
+    vertical-align: top;
+  }
+  .post > footer .do,
+  .post > footer .doing,
+  .post > footer .done,
+  .post > footer .vote,
+  .post > footer .voted {
+    margin-right: 0.875em; /* @line-height / 2 */
+  }
+
+  /* Support multiple form elements, wrapped in a container */
+  .post > footer .todo_actions {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.875em; /* @line-height / 2 */
+  }
+
+  @media (min-width: 35em) {
+    /* OPTIONAL: Position count on the right */
+    .post > footer .dos,
+    .post > footer .votes {
+      float: right;
+    }
+    .post > footer .tags {
+      clear: both;
+    }
+  }
+
+  .post article form.secondary {
+    text-align: right;
+  }
+  .post article form.secondary button {
+    font-size: 0.75em;
+  }
+
+  .post > article footer.options {
+    margin-top: 1.75em; /* @line-height */
+  }
+
+  .member-header .options {
+    margin-top    :  1.3125em;
+    margin-bottom : -1.3125em;
+  }
+  @media (min-width: 65em) {
+    .member-header .options {
+      margin-top: 0;
+    }
+  }
+
+  /* OPTIONAL: Position the edit button in the top right corner, on large screens */
+  .member-header .action a {
+    font-size: 0.75em;
+  }
+  @media (min-width: 65em) {
+    .member-header .introduction {
+      margin-right: 3em;
+    }
+    .member-header .action {
+      position: absolute;
+      top: 0;
+      right: 4em;
+    }
+  }
+
+  .member-header .options,
+  footer.options {
+    text-align: right;
+  }
+  footer.options p {
+    float: left;
+    margin: 0;
+  }
+  .member-header .options ul,
+  .member-header .options li,
+  footer.options ul,
+  footer.options li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .member-header .options p,
+  .member-header .options ul,
+  .member-header .options li,
+  .member-header .options li form,
+  footer.options li,
+  footer.options li form {
+    display: inline;
+  }
+  .member-header .options p {
+    float: none;
+  }
+  .member-header .options ul,
+  footer.options ul {
+    margin-top: 0;
+  }
+  .member-header .options p,
+  .member-header .options li,
+  footer.options li {
+    margin-right: 0.4375em;
+  }
+  .member-header .options li:last-child,
+  footer.options li:last-child {
+    margin-right: 0;
+  }
+
+  .options .edit   a,
+  .options .flag   button,
+  .options .spam   button,
+  .options .delete button {
+    background-color: transparent;
+    border-width: 0;
+    font-weight: inherit;
+    color: rgb(101, 102, 102);
+    margin: 0;
+    padding: 0;
+    font-size: 0.875em;
+    text-decoration: none;
+  }
+
+  .options .edit        a:before,
+  .options .flag   button:before,
+  .options .spam   button:before,
+  .options .delete button:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+    margin-right: 0.375em;
+    transition: color 0.2s;
+    color: rgb(229, 229, 229);
+  }
+
+  .options .edit a:before {
+    content: "\e609"; /* @icon-edit */
+  }
+  .options .flag button:before {
+    content: "\e607"; /* @icon-flag */
+  }
+  .options .spam button:before {
+    content: "\e608"; /* @icon-ban */
+  }
+  .options .delete button:before {
+    content: "\e60a"; /* @icon-delete */
+  }
+
+  .options .edit a:hover:before,
+  .options .edit a:active:before,
+  .options .edit a:focus:before {
+    color: rgb(49, 144, 242);
+  }
+
+  .options .flag   button:hover:before,
+  .options .flag   button:active:before,
+  .options .flag   button:focus:before,
+  .options .spam   button:hover:before,
+  .options .spam   button:active:before,
+  .options .spam   button:focus:before,
+  .options .delete button:hover:before,
+  .options .delete button:active:before,
+  .options .delete button:focus:before {
+    color: rgb(255, 102, 102);
+  }
+
+  /* OPTIONAL: Make the admin options take up less space */
+  .activity-list .activity-item {
+    margin-bottom: 0;
+  }
+  .activity-item ~ footer.options {
+    margin-top: -1.75em;
+    margin-bottom: 0.875em;
+    position: relative;
+  }
+
+  @media (min-width: 30em) {
+    .activity-list > li {
+      position: relative;
+    }
+    .activity-list footer.options {
+      margin-top: -2.25em;
+      margin-bottom: 0;
+      position: absolute;
+      width: 100%;
+      padding: 0 1.25em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+
+  /* OPTIONAL: Only show the admin options for one item at a time */
+  main:hover .activity-item ~ footer.options {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover li:hover .activity-item ~ footer.options {
+    opacity: 1;
+  }
+
+  .activity-list footer.options a,
+  .activity-list footer.options button {
+    font-size: 0.75em;
+    color: rgb(153, 153, 153);
+  }
+
+  .post > footer .do    h2,
+  .post > footer .doing h2,
+  .post > footer .done  h2,
+  .post > footer .vote  h2,
+  .post > footer .voted h2 {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .post .popular-posts h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post .popular-posts  h2 a:hover,
+  .post .popular-posts  h2 a:active,
+  .post .popular-posts  h2 a:focus {
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+  .post .popular-posts li:first-child .activity-item {
+    border-top-width: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+
+
+/* =Promotion
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .discussion {
+    position: relative;
+    border: 0.25em solid rgb(247, 247, 247);
+    background-color: rgb(252, 252, 252);
+    padding: 1em 1.25em;
+  }
+  .discussion h2 {
+    color: rgb(247, 113, 113);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+    line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
+  }
+  .discussion h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-active */
+    content: "\e614";
+
+    font-size: 1.65em;
+    margin-right: 0.4375em;
+    vertical-align: top;
+  }
+  .discussion h3 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+  }
+  .discussion h3 a {
+    color: rgb(101, 102, 102); /* @steel */
+    text-decoration: inherit;
+  }
+  .discussion h3 a:hover,
+  .discussion h3 a:active,
+  .discussion h3 a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .discussion h3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75em;
+  }
+  .discussion ul,
+  .discussion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .discussion + section,
+  .discussion + p {
+    margin-top: 1.5em;
+  }
+  .discussion ul {
+    margin-top: 1.5em;
+  }
+  .discussion li {
+    padding: 1em 0; /* 11px / font-size(11px) */
+    border-bottom: 1px solid rgb(218, 220, 224);
+    color: rgb(101, 102, 102); /* @steel */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+  }
+  .discussion li a {
+    text-decoration: none;
+  }
+  .discussion li a:hover,
+  .discussion li a:active,
+  .discussion li a:focus {
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+  .discussion li img {
+    float: right;
+    position: relative;
+    top: -0.5em;
+    margin-left: 0.5em;
+  }
+  .discussion .more {
+    text-align: center;
+  }
+  .discussion .more a {
+    color: rgb(247, 113, 113);
+    text-decoration: inherit;
+    font-weight: bold;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+  }
+  .promotion {
+    padding: 1.5em;
+    background: rgb(249, 249, 250);
+    border: 3px solid rgb(224, 224, 225);
+  }
+  .promotion h2 {
+    margin-bottom: 0;
+  }
+  .promotion ul {
+    margin-top: 0;
+  }
+  .promotion ul,
+  .promotion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .promotion > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .feedback {
+    background-color: rgb(58, 58, 58);
+    border-color: black;
+    color: white;
+  }
+  .feedback h2 {
+    font-size: 1.5em;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .feedback a {
+    color: inherit;
+    font-size: 0.875em;
+    text-decoration: none;
+  }
+  .feedback a:hover,
+  .feedback a:active,
+  .feedback a:focus {
+    text-decoration: underline;
+  }
+
+  p.ad {
+    max-width: none;
+  }
+
+  /* Line the fixed-size promtions up side-by-side */
+  @media (min-width: 400em) and (max-width: 609.9em) {
+    aside:after {
+      /* @clear-fix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+    aside > .ad,
+    aside > .promotion,
+    aside > .discussion,
+    aside > .fb-recommendations {
+      float: left;
+      margin-right: 1.5em;
+    }
+  }
+
+
+/* =Pages
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Dialog
+  ----------------------------------------------
+  (A page with a small amount of content.)
+  ----------------------------------------------- */
+  #content .dialog {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @blue-gray */
+    padding: 1.75em; /* @line-height */
+    background: rgb(253, 254, 255); /* @snow */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    text-align: center;
+  }
+
+  /* OPTIONAL: Make the form more compact on large screens */
+  @media (min-width: 40em) {
+    #content .dialog {
+      border-width: 0.1em;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 28em;
+    }
+  }
+
+  #content .dialog h1 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+
+    margin-bottom : 0.3888888889em;
+
+    font-family: inherit;
+    font-weight: bold;
+  }
+  #content .dialog form {
+    margin-top: 1.75em; /* @line-height */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25em;
+  }
+  #content .dialog form input[type="email"],
+  #content .dialog form input[type="text"],
+  #content .dialog form input[type="password"] {
+    max-width: none;
+  }
+  #content .dialog form p {
+    text-align: left;
+  }
+  #content .dialog form p.submit {
+    text-align: center;
+  }
+
+  /* Join / Sign In */
+  #content .dialog .facebook.action {
+    margin-top    : 1.75em;
+    margin-bottom : 1.75em;
+    font-size: inherit;
+  }
+  #content .facebook.action a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.5em;
+    margin-left: 0.5em;
+
+    content: "\e60d"; /* @icon-facebook */
+  }
+  #content .dialog > section h2 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  /* Forgot password */
+  #content .dialog form + p {
+    margin-top: 1.75em; /* @line-height */
+  }
+
+  #content .dialog section,
+  #content .dialog aside {
+    margin-top: 2.625em; /* @line-height x 3/2 */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    padding-top: 1.75em;
+  }
+  #content .dialog aside h2 {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+  }
+  #content .dialog aside h2,
+  #content .dialog aside p {
+    display: inline;
+    font-weight: bold;
+  }
+
+
+/* =Explore
+  ----------------------------------------------- */
+  .explore + .explore {
+    margin-top: 3.5em; /* @line-height x 2 */
+  }
+  .explore h1 {
+    /* @h2 */
+    font-size: 2.25em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  .explore h1 + h2 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 0.5833333334em;
+    margin-bottom : 0.5833333334em;
+  }
+  .explore h1 strong {
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+    letter-spacing: 0.05em;
+  }
+  .explore .follow-list form {
+    position: static;
+    text-align: inherit;
+    margin-top: 0.875em;
+  }
+  .explore .follow-list {
+    margin-top: 3.5em;
+  }
+  .explore .follow-list li {
+    border-width: 0;
+    padding: 0;
+    margin-bottom: 3.5em;
+    text-align: left;
+  }
+  .explore .follow-list li h3 {
+    margin-right: 0;
+  }
+  .explore .follow-list img {
+    border-radius: 100%;
+  }
+  .explore .follow-list li > a {
+    color: inherit;
+  }
+  .explore .follow-list li > a:hover  h3,
+  .explore .follow-list li > a:active h3,
+  .explore .follow-list li > a:focus  h3 {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .explore .follow-list a p {
+    font-size: 0.75em;
+  }
+
+  /* OPTIONAL: Make the page more compact, on large screens */
+  .explore .follow-list li {
+    display: inline-block;
+    width: 19em;
+    vertical-align: top;
+  }
+
+  /* Introduction */
+  .explore + .explore {
+    border-top: 0.1em solid rgb(240, 240, 240); /* @bright-mercury */
+    padding-top: 3.5em;
+  }
+  .explore .introduction {
+    margin-top: 3.5em;
+    margin-bottom: 5.25em;
+    text-align: center;
+  }
+  .explore .introduction,
+  .explore .introduction li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .explore .introduction li + li:before {
+    content: "";
+    display: block;
+    height: 6.25em;
+    width: 0.375em;
+    margin: 1.75em auto;
+    background: rgb(240, 240, 240); /* @bright-mercury */
+  }
+  .explore .introduction h3 {
+    /* @h1 */
+    font-size: 4.5em;
+    font-family: inherit;
+    line-height   : 1.1666666667em; /* @line-height x 3 / 4.5em */
+    margin-top    : 0;
+    margin-bottom : 0.3888888889em;
+  }
+  .explore .introduction h3 span {
+    border-bottom: 0.1em solid;
+  }
+  .explore .introduction p {
+    font-weight: bold;
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* @h3*/
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+  }
+  .explore .post {
+    color: rgb(255, 224, 18);
+  }
+  .explore .do {
+    color: rgb(99, 221, 144);
+  }
+  .explore .vote {
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .explore .connect {
+    color: rgb(238, 130, 105); /* @salmon */
+  }
+  .explore .join h3 {
+    border-width: 0;
+  }
+  .explore .join a {
+    color: rgb(0, 1, 2); /* @midnight */
+    border: 0.15em solid;
+    text-decoration: none;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding: 0.675em 1.5em;
+    display: inline-block;
+  }
+  .explore .join a:hover,
+  .explore .join a:active,
+  .explore .join a:focus {
+    background   : rgb(47, 132, 218); /* @ocean */
+    border-color : rgb(47, 132, 218); /* @ocean */
+    color: white;
+  }
+
+  /* OPTIONAL: Make the introduction take up less vertical space on large screens. */
+  @media (min-width: 65em) {
+    .explore .introduction img,
+    .explore .introduction h3,
+    .explore .introduction p {
+      margin: 0;
+      vertical-align: middle;
+      display: inline-block;
+      width: 33%;
+    }
+    .explore .introduction {
+      margin-top: 5.25em;
+    }
+    .explore .introduction li {
+      margin-top: 0;
+    }
+    .explore .introduction li + li:before {
+      margin-top: 0;
+      margin-bottom: 3.5em;
+      clear: both;
+    }
+    .explore .introduction img {
+      margin-top: -3.5em;
+      float: left;
+    }
+    .explore .introduction li:nth-child(2n) img {
+      float: right;
+    }
+    .explore .introduction li:nth-child(2n) h3 {
+      float: right;
+    }
+  }
+
+
+/* =Account Settings
+  ----------------------------------------------- */
+  @media (min-width: 40em) {
+    section.form {
+      border-width: 0.1em;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @blue-gray */
+      padding: 1.75em; /* @line-height */
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 40em) {
+    .profile-form form {
+      border-width: 0.1em;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @blue-gray */
+      padding: 1.75em; /* @line-height */
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .profile-form form {
+    background: rgb(253, 254, 255); /* @snow */
+  }
+
+
+/* =Profile Form
+  ----------------------------------------------- */
+  .profile-form textarea {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-size: 2.5em; /* 40px / @font-size(16px) */
+    max-width: none;
+    height: 7em;
+    padding: 0.25em;
+  }
+  .profile-form .basics,
+  .profile-form .details {
+    padding-bottom: 1.75em;
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  .profile-form .details {
+    margin-top: 0.875em; /* @line-height / 2 */
+  }
+  .profile-form .note {
+    text-align: right;
+  }
+  .profile-form .skills input {
+    max-width: none;
+    font-style: italic;
+  }
+  .profile-form .prefix:after {
+    content: "…";
+  }
+
+  /* OPTIONAL: Make the form more compact on large screens */
+  @media (min-width: 40em) {
+    .profile-form .basics,
+    .profile-form .details {
+      margin-top: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
+    .profile-form .basics {
+      float: left;
+      width: 14em;
+    }
+    .profile-form .details {
+      margin-left: 15.75em;
+      padding-left: 1.75em;
+      border-left: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    }
+    .profile-form .submit {
+      border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+      padding-top: 1.75em;
+      padding-left: 17.5em;
+    }
+  }
+  @media (min-width: 70em) {
+    .profile-form textarea {
+      height: 3.5em;
+    }
+    .profile-form .skills input {
+      max-width: 38.5em; /* This number is arbitrary, but happens to make the field fit on one line with the prefix */
+    }
+  }
+
+
+/* =Search Results
+  ----------------------------------------------- */
+  .search-results section + section {
+    margin-top: 3.5em; /* @line-height x 2 */
+  }
+
+
+  /* =Testing
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  body.pattern {
+    padding: 3.5em 1.75em 7em;
+    background: rgb(253, 254, 255); /* @snow */
+  }
+  /*
+  body.test-type {
+    background: white url(shared/test/rule.svg) top left repeat;
+    background-size: auto 1.5em;
+  }
+  */
+
+
+
+  /* =Admin
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .comment-list article footer ul,
+  .comment-list article footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .comment-list article footer ul {
+    text-align: right;
+  }
+  .comment-list article footer li {
+    display: inline;
+    margin-right: 1em;
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .comment-list article footer .reply {
+    float: left;
+  }
+
+  .comment-list article footer .reply       a:before,
+  .comment-list article footer .flag   button:before,
+  .comment-list article footer .delete button:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+    margin-right: 0.375em;
+    color: rgb(229, 229, 229);
+    transition: color 0.2s;
+  }
+
+  .comment-list article footer .reply a {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+  .comment-list article footer .flag form,
+  .comment-list article footer .delete form {
+    display: inline;
+  }
+  .comment-list article footer .flag button,
+  .comment-list article footer .delete button {
+    background-color: transparent;
+    border-width: 0;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+
+  .comment-list article .reply a:before {
+    content: "\e605"; /* @icon-reply */
+  }
+
+  .comment-list article .flag button:before {
+    content: "\e607"; /* @icon-flag */
+  }
+
+  .comment-list article .delete button:before {
+    content: "\e60a"; /* @icon-delete */
+  }
+
+  .comment-list article .reply a:hover:before,
+  .comment-list article .reply a:active:before,
+  .comment-list article .reply a:focus:before {
+    color: rgb(49, 144, 242);
+  }
+
+  .comment-list article .flag button:hover:before,
+  .comment-list article .flag button:active:before,
+  .comment-list article .flag button:focus:before {
+    color: rgb(255, 102, 102);
+  }
+  .comment-list article .delete button:hover:before,
+  .comment-list article .delete button:active:before,
+  .comment-list article .delete button:focus:before {
+    color: rgb(255, 102, 102);
+  }
+
+
+/* =Registration Modal
+  -----------------------------------------------
+  KLUDGE: We should move these into the registration style sheet.
+  ----------------------------------------------- */
+
+  /* Remove the margin below the header */
+  #registration-modal-box .dialog header.start_now {
+    margin-bottom: 0;
+  }
+
+  /* Use the correct font for the main headline */
+  #registration-modal-box .dialog header.start_now h1,
+  #registration-modal-box .dialog header .welcome_back {
+    font-family: inherit;
+  }
+

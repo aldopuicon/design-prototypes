@@ -1,0 +1,122 @@
+body {
+  background-color: rgb(246, 246, 246);
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  height: 50px;
+}
+
+.container .container {
+  width: 4.1666666666%;
+}
+
+.element {
+  position: relative;
+  float: right;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-width: 1px;
+  border-color: #dadce0;
+  border-style: solid dotted solid solid;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: rgb(255, 255, 255);
+}
+
+.image {
+  display: block;
+  position: relative;
+  clear: both;
+  height: auto;
+  overflow: hidden;
+}
+
+._button {
+  display: block;
+  line-height: 1.38;
+  text-align: center;
+}
+
+._input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 40%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border-top: 1px solid #dadce0;
+  border-bottom: 1px solid #dadce0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 6px rgba(241, 241, 241, 0.5) inset;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #333333;
+}
+
+.container ._button {
+  position: relative;
+  float: left;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  border-top: 1px solid #dadce0;
+  border-right: 1px solid #dadce0;
+  border-bottom: 1px solid #dadce0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.container-1 {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 317px;
+}
+
+.container-2 {
+  float: left;
+  margin-left: 25.8333333333%;
+}
+
+.container-3 {
+  float: right;
+  margin-right: 25.8333333333%;
+}
+
+.image-1 {
+  float: right;
+  z-index: 3;
+  width: 30px;
+  margin: -40px 10px 0 0;
+}
+
+.image-2 {
+  float: left;
+  z-index: 6;
+  width: 20px;
+  margin: -35px 0 0 15px;
+  opacity: 0.2;
+}
+
+._button-2 {
+  position: absolute;
+  top: 387px;
+  left: 25.8333333333%;
+  width: 80px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #8ae39a;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  resize: none;
+}
