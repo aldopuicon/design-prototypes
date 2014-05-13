@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<title>GOOD | Live Well + Do Good</title>
+	<style type="text/css"></style>
+
+<style>
+	  	#nav {
+      background-image: url(img/background-element.png); 
+  		background-repeat: repeat-x; 
+  		background-position: top; 
+  		height: 130px;
+  	}
+
+  	#nav div {
+		position: relative; 
+		margin: 0 auto; 
+		width: 1680px; 
+		background-image: url(img/background-element.png); 
+		background-repeat: repeat-x; 
+		background-position: top;
+  	}
+
+  	.post {
+  		position: absolute; 
+  		margin: 0 auto; 
+  	}
+
+  	#nav.fixed {
+  		position: fixed;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		z-index: 1;
+  	}
+
+  	#nav.fixed+div {
+		  margin-top: 130px;
+  	}
+
+    #nav .share {
+      position: absolute;
+      top: -135px;
+    }
+
+    #nav.fixed .share {
+      top: 0;
+      transition: top 0.2s;
+    }
+  </style>
+
+
+</head>
+<body style="margin:0; background-image: url(img/background-element.png); background-repeat: repeat-x; background-position: top;">
+	<div id="nav">
+		<div class="nav"><img style="display: block;" src="img/nav.png"/></div>
+    	<div class="share"><img style="display: block;" src="img/replace.png"/></div>
+	</div>	
+	<div style="position: relative; margin: 0 auto; width: 1680px;">
+		<img src="img/do-creation-flow1-v1a.png" />
+		<a href="post.html" style="position: absolute; top: 855px; left: 70px; width: 620px; height: 105px;"></a>
+	</div>
+
+<script src="sticky.js"></script>
+
+</body>
+</html>
